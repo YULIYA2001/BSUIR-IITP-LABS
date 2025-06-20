@@ -1,0 +1,114 @@
+//---------------------------------------------------------------------------
+
+#pragma hdrstop
+
+#include "Square.h"
+
+Square :: Square(int a, int b, int c, int d)
+	{
+		x1 = a;
+		y1 = b;
+		x2 = c;
+		y2 = d;
+	}
+
+void Square :: Set(int a, int b, int c, int d)
+	{
+		x1 = a;
+		y1 = b;
+		x2 = c;
+		y2 = d;
+    }
+
+void Square :: show(TCanvas *Canvas)
+	{
+		Canvas->Pen->Color=clGreen;
+		Canvas->Pen->Width=3;
+		if (x2-x1<y2-y1)
+		{
+			Canvas->Rectangle(x1, y1, x2, y1+(x2 - x1));
+		}
+		else
+		{
+			Canvas->Rectangle(x1, y1, x1 + (y2 - y1), y2);
+		}
+	}
+
+float Square :: Area()
+	{
+		if (x2-x1<y2-y1)
+		{
+			S = (float)((x2 - x1) * (x2 - x1));
+		}
+		else
+		{
+			S = (float)((y2 - y1) * (y2 - y1));
+		}
+		S = mod(S);
+		return S;
+	}
+
+float Square :: Perimeter()
+	{
+		if (x2-x1<y2-y1)
+		{
+			P = (float)((x2 - x1) * 4);
+		}
+		else
+		{
+			P = (float)((y2 - y1) * 4);
+		}
+		P = mod(P);
+		return P;
+	}
+
+int Square :: XCentMass()
+	{
+		if (x2-x1<y2-y1)
+		{
+			X = x1 + (x2 - x1) / 2;
+		}
+		else
+		{
+			X = x1 + (y2 - y1) / 2;
+		}
+		return X;
+	}
+
+int Square :: YCentMass()
+	{
+		if (x2-x1<y2-y1)
+		{
+			Y = y1 + (x2 - x1) / 2;
+		}
+		else
+		{
+			Y = y1 + (y2 - y1) / 2;
+		}
+		return Y;
+	}
+
+void Square :: hide(TCanvas *Canvas)
+	{
+		Canvas->Pen->Color=clWhite;
+		Canvas->Pen->Width=3;
+		if (x2-x1<y2-y1)
+		{
+			Canvas->Rectangle(x1, y1, x2, y1+(x2 - x1));
+		}
+		else
+		{
+			Canvas->Rectangle(x1, y1, x1 + (y2 - y1), y2);
+		}
+    }
+
+void Square :: change(int X, int Y, int side, int &x1, int &y1, int &x2, int &y2)
+	{
+		x1 =  X - side / 2;
+		y1 =  Y - side / 2;
+		x2 =  X + side / 2;
+		y2 =  Y + side / 2;
+	}
+
+
+#pragma package(smart_init)

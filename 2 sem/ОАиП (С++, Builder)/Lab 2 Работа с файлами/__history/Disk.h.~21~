@@ -1,0 +1,25 @@
+//---------------------------------------------------------------------------
+
+#ifndef DiskH
+#define DiskH
+
+class Disk
+{
+    public:
+    String type;
+	String name;
+	String author;
+	String cost;
+	String notes;
+	String separator;
+	Disk(){}
+	Disk(String, String, String, String, String);
+	~Disk(){};
+	void ReadFromFile(TStringList *, int);   //инициализация данных класса
+	void Add(int &, Disk *, TMemo *);//добавление
+	void Remove(int, int &, Disk *);//удаление
+	void Sort(int, int, Disk *);//сортировка
+	void Show(TMemo *);//просмотр записей файла
+};
+
+#endif

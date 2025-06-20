@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1582008424 source:c:\УЧЁБА\Программирование\1\main.c
+	<stdio.h>
+	<conio.h>
+
+1582786169 source:c:\УЧЁБА\Программирование\лаб 1\main.c
+	<stdio.h>
+	<conio.h>
+

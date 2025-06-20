@@ -1,0 +1,49 @@
+# depslib dependency file v1.0
+1583697538 source:c:\users\user\desktop\3.2.2\func.c
+	<time.h>
+
+1583698758 source:c:\users\user\desktop\3.2.2\main.c
+	<stdio.h>
+	<malloc.h>
+	<conio.h>
+	"func.h"
+
+1583697179 c:\users\user\desktop\3.2.2\func.h
+
+1584119251 source:c:\УЧЁБА\Программирование\лаб 3\3.2.2\func.c
+	<time.h>
+	<stdio.h>
+	<stdlib.h>
+
+1584119410 source:c:\УЧЁБА\Программирование\лаб 3\3.2.2\main.c
+	<stdio.h>
+	<malloc.h>
+	<conio.h>
+	"func.h"
+
+1584117964 c:\УЧЁБА\Программирование\лаб 3\3.2.2\func.h
+
+1583697538 source:c:\УЧЁБА\Программирование\лаб 3\func.c
+	<time.h>
+
+1583699547 source:c:\УЧЁБА\Программирование\лаб 3\main.c
+	<stdio.h>
+	<malloc.h>
+	<conio.h>
+	"func.h"
+
+1583697179 c:\УЧЁБА\Программирование\лаб 3\func.h
+
+1583700024 source:c:\УЧЁБА\Программирование\лаб 3\3.2.2(1)\func.c
+	<time.h>
+	<stdio.h>
+	<stdlib.h>
+
+1583699547 source:c:\УЧЁБА\Программирование\лаб 3\3.2.2(1)\main.c
+	<stdio.h>
+	<malloc.h>
+	<conio.h>
+	"func.h"
+
+1583697179 c:\УЧЁБА\Программирование\лаб 3\3.2.2(1)\func.h
+

@@ -1,0 +1,70 @@
+//---------------------------------------------------------------------------
+
+#pragma hdrstop
+
+#include "Figure.h"
+#include <math.h>
+
+float Figure :: mod(float a)
+	{
+		return (a < 0) ? (float)(a*(-1)) : a;
+    }
+
+int Figure :: mod(int a)
+	{
+		return (a < 0) ? a*(-1) : a;
+	}
+
+void Figure :: moveUp(int x1, int &y1, int x2, int &y2)
+	{
+			 y1 -= 5;
+			 y2 -= 5;
+	}
+
+void Figure :: moveDown(int x1, int &y1, int x2, int &y2)
+	{
+			y1 += 5;
+			y2 += 5;
+	}
+
+void Figure :: moveRight(int &x1, int y1, int &x2, int y2)
+	{
+			x1 += 5;
+			x2 += 5;
+	}
+
+void Figure :: moveLeft(int &x1, int y1, int &x2, int y2)
+	{
+			x1 -= 5;
+			x2 -= 5;
+	}
+
+void Figure :: Bigger(int &x1, int &y1, int &x2, int &y2)
+	{
+		x1 -= 5;
+		x2 += 5;
+		y1 -= 5;
+        y2 += 5;
+	}
+
+void Figure :: Smaller(int &x1, int &y1, int &x2, int &y2)
+	{
+		if((x2 - x1) > 0 && (y2 - y1) > 0)
+		{
+			x1 += 5;
+			x2 -= 5;
+			y1 += 5;
+			y2 -= 5;
+		}
+	}
+
+void Figure :: Rotation(float newX, float newY, int &x1, int &y1, int &x2, int &y2)
+	{
+		x1 = (int)(newX + (x1 - newX) * cos(0.2) - (y1 - newY) * sin(0.2));
+		y1 = (int)(newY + (x1 - newX) * sin(0.2) + (y1 - newY) * cos(0.2));
+		x2 = (int)(newX + (x2 - newX) * cos(0.2) - (y2 - newY) * sin(0.2));
+		y2 = (int)(newY + (x2 - newX) * sin(0.2) + (y2 - newY) * cos(0.2));
+	}
+
+#pragma package(smart_init)
+

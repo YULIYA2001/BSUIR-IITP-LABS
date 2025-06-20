@@ -1,0 +1,55 @@
+//---------------------------------------------------------------------------
+
+#pragma hdrstop
+
+#include "Rect.h"
+
+Rect :: Rect(int a, int b)
+	{
+		x1=a;
+		y1=b;
+	}
+
+	void Rect :: show(TCanvas *Canvas)
+	{
+		Canvas->Pen->Color=clRed;
+		Canvas->Brush->Color=clRed;
+		Canvas->Rectangle(x1,y1,x1+70,y1+30);
+	}
+
+	void Rect :: moveUp(TCanvas *Canvas)
+	{
+		if (y1 > 120)
+		{
+			 y1 -= 20;
+		}
+	}
+
+	void Rect :: moveDown(TCanvas *Canvas)
+	{
+		if (y1 < 220)
+		{
+			 y1 += 20;
+		}
+	}
+
+	void Rect :: moveRight(TCanvas *Canvas)
+	{
+		x1 += 20;
+	}
+
+   	void Rect :: moveLeft(TCanvas *Canvas)
+	{
+		x1 -= 20;
+	}
+
+	void Rect :: hide(TCanvas *Canvas)
+	{
+		Canvas->Pen->Color=clSkyBlue;
+		Canvas->Brush->Color=clSkyBlue;
+		Canvas->Rectangle(x1,y1,x1+70,y1+30);
+	}
+
+#pragma package(smart_init)
+
+

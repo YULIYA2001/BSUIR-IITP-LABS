@@ -1,0 +1,30 @@
+//---------------------------------------------------------------------------
+
+#ifndef SquareH
+#define SquareH
+
+#include "Rect.h"
+
+class  Square : public  Rectan
+{
+	int x1,y1,x2,y2;
+	int x3, x4, y3, y4;
+	float S, P;
+	int X, Y;
+	public:
+	Square(){}  //конструктор по умолчанию
+	Square(int, int, int, int); //конструктор
+	~Square(){}   //деструктор
+	void Set(int, int, int, int);
+	void show(TCanvas *Canvas);
+	float Area();
+	float Perimeter();
+	int XCentMass();
+	int YCentMass();
+	void hide(TCanvas *Canvas);
+	void change(float, int &, int &, int &, int &);  //изменение длины стороны
+	void Rotation(int&,int&,int&,int&,int&,int&,int&,int&); //вращение
+	void SetForRotation(int, int, int, int, int, int, int, int);
+};
+
+#endif

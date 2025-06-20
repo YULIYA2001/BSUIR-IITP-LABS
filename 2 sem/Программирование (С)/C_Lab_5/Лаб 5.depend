@@ -1,0 +1,28 @@
+# depslib dependency file v1.0
+1587050729 source:c:\УЧЁБА\Программирование\лаб 5\Лаб 5\func.c
+	"func.h"
+	<stdlib.h>
+
+1587043694 c:\УЧЁБА\Программирование\лаб 5\Лаб 5\func.h
+
+1587054878 source:c:\УЧЁБА\Программирование\лаб 5\Лаб 5\main.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<conio.h>
+	<locale.h>
+	"func.h"
+
+1588666801 source:c:\УЧЁБА\Программирование\лаб 5\func.c
+	"func.h"
+
+1588666801 c:\УЧЁБА\Программирование\лаб 5\func.h
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<conio.h>
+	<locale.h>
+
+1588666801 source:c:\УЧЁБА\Программирование\лаб 5\main.c
+	"func.h"
+

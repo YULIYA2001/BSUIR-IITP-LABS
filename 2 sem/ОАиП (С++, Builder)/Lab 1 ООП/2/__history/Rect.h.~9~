@@ -1,0 +1,30 @@
+//---------------------------------------------------------------------------
+
+#ifndef RectH
+#define RectH
+
+#include "Figure.h"
+
+class  Rectan : public Figure
+{
+	int x1,y1,x2,y2;
+	float S, P;
+	int X, Y;
+	public:
+	Rectan(){}  //конструктор по умолчанию
+	Rectan(int, int, int, int); //конструктор
+	~Rectan(){}   //деструктор
+    void Set(int, int, int, int);
+	void show(TCanvas *Canvas);
+	float Area();
+	float Perimeter();
+	int XCentMass();
+	int YCentMass();
+	void hide(TCanvas *Canvas);
+    //void moveUp(TCanvas *Canvas);
+	//void moveDown(TCanvas *Canvas);
+	//void moveRight(TCanvas *Canvas);
+	//void moveLeft(TCanvas *Canvas);
+};
+
+#endif

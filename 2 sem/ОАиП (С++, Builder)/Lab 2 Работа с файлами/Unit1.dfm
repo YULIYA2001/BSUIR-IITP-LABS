@@ -1,0 +1,391 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Anchors = [akLeft]
+  Caption = #1056#1072#1073#1086#1090#1072' '#1089' '#1092#1072#1081#1083#1072#1084#1080
+  ClientHeight = 363
+  ClientWidth = 645
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  OnCreate = FormCreate
+  DesignSize = (
+    645
+    363)
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 8
+    Top = 57
+    Width = 140
+    Height = 16
+    Anchors = [akLeft]
+    Caption = #1053#1072#1080#1084#1077#1085#1086#1074#1072#1085#1080#1077' '#1076#1080#1089#1082#1072
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 8
+    Top = 104
+    Width = 140
+    Height = 16
+    Anchors = [akLeft]
+    Caption = #1040#1074#1090#1086#1088
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 8
+    Top = 153
+    Width = 140
+    Height = 16
+    Anchors = [akLeft]
+    Caption = #1062#1077#1085#1072
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label4: TLabel
+    Left = 8
+    Top = 203
+    Width = 140
+    Height = 16
+    Anchors = [akLeft]
+    Caption = #1055#1088#1080#1084#1077#1095#1072#1085#1080#1103
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label5: TLabel
+    Left = 8
+    Top = 8
+    Width = 129
+    Height = 16
+    Anchors = [akLeft]
+    Caption = #1058#1080#1087' '#1080#1085#1092#1086#1088#1084#1072#1094#1080#1080
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Memo1: TMemo
+    Left = 191
+    Top = 8
+    Width = 274
+    Height = 211
+    Anchors = [akLeft, akTop, akRight, akBottom]
+    ReadOnly = True
+    ScrollBars = ssBoth
+    TabOrder = 0
+    OnMouseMove = Memo1MouseMove
+  end
+  object Button1: TButton
+    Left = 471
+    Top = 70
+    Width = 166
+    Height = 25
+    Hint = #1042#1074#1077#1076#1080#1090#1077' '#1076#1072#1085#1085#1099#1077' '#1074' '#1087#1086#1083#1077' '#1044#1086#1073#1072#1074#1083#1077#1085#1080#1077' '#1089#1086#1075#1083#1072#1089#1085#1086' '#1096#1072#1073#1083#1086#1085#1091
+    Anchors = [akRight]
+    Caption = #1044#1086#1073#1072#1074#1080#1090#1100
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 1
+    OnClick = Button1Click
+  end
+  object Button2: TButton
+    Left = 471
+    Top = 8
+    Width = 166
+    Height = 25
+    Hint = #1042' '#1092#1072#1081#1083#1077' '#1085#1072' '#1076#1072#1085#1085#1099#1081' '#1084#1086#1084#1077#1085#1090
+    Anchors = [akRight]
+    Caption = #1057#1086#1076#1077#1088#1078#1080#1084#1086#1077' '#1092#1072#1081#1083#1072
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 2
+    OnClick = Button2Click
+  end
+  object Button3: TButton
+    Left = 471
+    Top = 132
+    Width = 166
+    Height = 25
+    Hint = #1042#1099#1073#1077#1088#1080#1090#1077' '#1074#1080#1076' '#1089#1086#1088#1090#1080#1088#1086#1074#1082#1080' '#1074' '#1087#1086#1083#1077' '#1057#1086#1088#1090#1080#1088#1086#1074#1082#1072
+    Anchors = [akRight]
+    Caption = #1057#1086#1088#1090#1080#1088#1086#1074#1072#1090#1100
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 3
+    OnClick = Button3Click
+  end
+  object Button4: TButton
+    Left = 471
+    Top = 194
+    Width = 166
+    Height = 25
+    Anchors = [akRight]
+    Caption = #1057#1086#1093#1088#1072#1085#1080#1090#1100' '#1074' '#1092#1072#1081#1083
+    TabOrder = 4
+    OnClick = Button4Click
+  end
+  object Button5: TButton
+    Left = 471
+    Top = 163
+    Width = 166
+    Height = 25
+    Hint = #1042#1074#1077#1076#1080#1090#1077' '#1076#1072#1085#1085#1099#1077' '#1074' '#1087#1086#1083#1077' '#1055#1086#1080#1089#1082
+    Anchors = [akRight]
+    Caption = #1055#1086#1080#1089#1082
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 5
+    OnClick = Button5Click
+  end
+  object Button6: TButton
+    Left = 471
+    Top = 225
+    Width = 166
+    Height = 25
+    Anchors = [akRight]
+    Caption = #1042#1099#1093#1086#1076
+    TabOrder = 6
+    OnClick = Button6Click
+  end
+  object ComboBox1: TComboBox
+    Left = 8
+    Top = 30
+    Width = 177
+    Height = 21
+    Style = csDropDownList
+    Anchors = [akLeft]
+    TabOrder = 7
+    OnChange = ComboBox1Change
+  end
+  object Edit1: TEdit
+    Left = 8
+    Top = 77
+    Width = 177
+    Height = 21
+    Anchors = [akLeft]
+    ReadOnly = True
+    TabOrder = 8
+  end
+  object Button7: TButton
+    Left = 471
+    Top = 101
+    Width = 166
+    Height = 25
+    Hint = #1042#1099#1073#1077#1088#1080#1090#1077' '#1085#1077#1086#1073#1093#1086#1076#1080#1084#1099#1077' '#1076#1072#1085#1085#1099#1077' '#1074' '#1087#1086#1083#1077' '#1058#1080#1087' '#1080#1085#1092#1086#1088#1084#1072#1094#1080#1080
+    Anchors = [akRight]
+    Caption = ' '#1059#1076#1072#1083#1080#1090#1100
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 9
+    OnClick = Button7Click
+  end
+  object Edit2: TEdit
+    Left = 8
+    Top = 126
+    Width = 177
+    Height = 21
+    Anchors = [akLeft]
+    ReadOnly = True
+    TabOrder = 10
+  end
+  object Edit3: TEdit
+    Left = 8
+    Top = 175
+    Width = 177
+    Height = 21
+    Anchors = [akLeft]
+    ReadOnly = True
+    TabOrder = 11
+  end
+  object Edit4: TEdit
+    Left = 8
+    Top = 225
+    Width = 177
+    Height = 21
+    Anchors = [akLeft]
+    ReadOnly = True
+    TabOrder = 12
+  end
+  object Panel1: TPanel
+    Left = 8
+    Top = 257
+    Width = 177
+    Height = 98
+    Anchors = [akLeft, akBottom]
+    TabOrder = 13
+    object Label6: TLabel
+      Left = 8
+      Top = 37
+      Width = 158
+      Height = 13
+      Caption = #1042#1074#1077#1076#1080#1090#1077' '#1072#1074#1090#1086#1088#1072'/'#1085#1072#1080#1084#1077#1085#1086#1074#1072#1085#1080#1077
+    end
+    object Label7: TLabel
+      Left = 60
+      Top = 12
+      Width = 49
+      Height = 19
+      Caption = #1055#1086#1080#1089#1082' '
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Tahoma'
+      Font.Style = [fsItalic]
+      ParentFont = False
+    end
+    object Edit5: TEdit
+      Left = 5
+      Top = 64
+      Width = 161
+      Height = 21
+      TabOrder = 0
+    end
+  end
+  object Panel2: TPanel
+    Left = 471
+    Top = 256
+    Width = 166
+    Height = 97
+    Anchors = [akRight, akBottom]
+    TabOrder = 14
+    object Label8: TLabel
+      Left = 40
+      Top = 0
+      Width = 92
+      Height = 19
+      Caption = #1057#1086#1088#1090#1080#1088#1086#1074#1082#1072' '
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Tahoma'
+      Font.Style = [fsItalic]
+      ParentFont = False
+    end
+    object RadioGroup1: TRadioGroup
+      Left = 0
+      Top = 0
+      Width = 169
+      Height = 97
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ItemIndex = 0
+      Items.Strings = (
+        #1087#1086' '#1072#1074#1090#1086#1088#1091
+        #1087#1086' '#1085#1072#1080#1084#1077#1085#1086#1074#1072#1085#1080#1102)
+      ParentFont = False
+      TabOrder = 0
+    end
+  end
+  object Button8: TButton
+    Left = 471
+    Top = 39
+    Width = 166
+    Height = 25
+    Hint = #1044#1072#1085#1085#1099#1077' '#1080#1079' '#1092#1072#1081#1083#1072' '#1089' '#1091#1095#1077#1090#1086#1084' '#1042#1072#1096#1080#1093' '#1080#1079#1084#1077#1085#1077#1085#1080#1081
+    Anchors = [akRight]
+    Caption = #1058#1077#1082#1091#1097#1077#1077' '#1089#1086#1076#1077#1088#1078#1080#1084#1086#1077
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 15
+    OnClick = Button8Click
+  end
+  object Panel3: TPanel
+    Left = 191
+    Top = 227
+    Width = 274
+    Height = 128
+    Anchors = [akLeft, akRight, akBottom]
+    TabOrder = 16
+    DesignSize = (
+      274
+      128)
+    object Label9: TLabel
+      Left = 88
+      Top = 0
+      Width = 93
+      Height = 19
+      Anchors = [akTop]
+      Caption = #1044#1086#1073#1072#1074#1083#1077#1085#1080#1077' '
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Tahoma'
+      Font.Style = [fsItalic]
+      ParentFont = False
+    end
+    object Label10: TLabel
+      Left = 38
+      Top = 25
+      Width = 45
+      Height = 13
+      Caption = #1058#1080#1087' '#1080#1085#1092'.'
+    end
+    object Label11: TLabel
+      Left = 10
+      Top = 39
+      Width = 73
+      Height = 13
+      Caption = #1053#1072#1080#1084#1077#1085#1086#1074#1072#1085#1080#1077
+    end
+    object Label12: TLabel
+      Left = 52
+      Top = 53
+      Width = 31
+      Height = 13
+      Caption = #1040#1074#1090#1086#1088
+    end
+    object Label13: TLabel
+      Left = 52
+      Top = 67
+      Width = 26
+      Height = 13
+      Caption = #1062#1077#1085#1072
+    end
+    object Label14: TLabel
+      Left = 24
+      Top = 81
+      Width = 61
+      Height = 13
+      Caption = #1055#1088#1080#1084#1077#1095#1072#1085#1080#1103
+    end
+    object Memo2: TMemo
+      Left = 91
+      Top = 25
+      Width = 176
+      Height = 96
+      Hint = #1042#1074#1077#1076#1080#1090#1077' 5 '#1089#1090#1088#1086#1082' '#1089#1086#1075#1083#1072#1089#1085#1086' '#1096#1072#1073#1083#1086#1085#1091
+      Anchors = [akLeft, akTop, akRight, akBottom]
+      ParentShowHint = False
+      ScrollBars = ssHorizontal
+      ShowHint = True
+      TabOrder = 0
+    end
+  end
+end

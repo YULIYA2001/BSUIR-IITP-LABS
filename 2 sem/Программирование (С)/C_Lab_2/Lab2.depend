@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1582916052 source:c:\УЧЁБА\Программирование\лаб 2\lab2 c makefile (2.1.6+2.2.6)\2.1.6.c
+	<stdio.h>
+	<conio.h>
+	<locale.h>
+
+1583392729 source:c:\УЧЁБА\Программирование\лаб 2\lab2 c makefile (2.1.6+2.2.6)\2.2.6.c
+	<stdio.h>
+	<conio.h>
+	<math.h>
+
+1582915723 source:c:\УЧЁБА\Программирование\лаб 2\lab2 c makefile (2.1.6+2.2.6)\main.c
+	<stdio.h>
+	<conio.h>
+	<math.h>
+	"header.h"
+
+1582912612 c:\УЧЁБА\Программирование\лаб 2\lab2 c makefile (2.1.6+2.2.6)\header.h
+

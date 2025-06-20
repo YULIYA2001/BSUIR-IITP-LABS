@@ -1,0 +1,71 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "Unit1.h"
+#include "Rect.h"
+#include "Ship.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TForm1 *Form1;
+
+::Ship Boat(200, 270);   //создание объекта класса Ship
+::Rect Flag(344, 220);   //создание объекта класса Rect
+
+//---------------------------------------------------------------------------
+__fastcall TForm1::TForm1(TComponent* Owner)
+	: TForm(Owner)
+{
+}
+
+//действия при создании формы
+void __fastcall TForm1::FormCreate(TObject *Sender)
+{
+    Image1->Canvas->Brush->Color=clSkyBlue; //Устанавливаем цвет кисти
+	Image1->Canvas->FloodFill(1,1,clWhite,fsSurface);
+	Boat.show(Image1->Canvas);
+    Flag.show(Image1->Canvas);
+}
+//---------------------------------------------------------------------------
+
+//передвижение флага вверх
+void __fastcall TForm1::Button1Click(TObject *Sender)
+{
+	Flag.hide(Image1->Canvas);
+	Flag.moveUp(Image1->Canvas);
+	Flag.show(Image1->Canvas);
+}
+
+//передвижение флага вниз
+void __fastcall TForm1::Button2Click(TObject *Sender)
+{
+	Flag.hide(Image1->Canvas);
+	Flag.moveDown(Image1->Canvas);
+	Flag.show(Image1->Canvas);
+}
+
+//движение лодки вправо
+void __fastcall TForm1::Button3Click(TObject *Sender)
+{
+	Boat.hide(Image1->Canvas);
+	Flag.hide(Image1->Canvas);
+	Boat.moveRight(Image1->Canvas);
+	Flag.moveRight(Image1->Canvas);
+	Boat.show(Image1->Canvas);
+	Flag.show(Image1->Canvas);
+}
+
+//движение лодки влево
+void __fastcall TForm1::Button4Click(TObject *Sender)
+{
+	Boat.hide(Image1->Canvas);
+	Flag.hide(Image1->Canvas);
+	Boat.moveLeft(Image1->Canvas);
+	Flag.moveLeft(Image1->Canvas);
+	Boat.show(Image1->Canvas);
+	Flag.show(Image1->Canvas);
+}
+//---------------------------------------------------------------------------
+

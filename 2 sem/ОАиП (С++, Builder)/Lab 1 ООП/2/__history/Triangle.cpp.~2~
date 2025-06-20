@@ -1,0 +1,85 @@
+//---------------------------------------------------------------------------
+
+#pragma hdrstop
+
+#include "Triangle.h"
+
+/*Triangle :: Triangle(int a, int b, int c, int d)
+	{
+		x1 = a;
+		y1 = b;
+		x2 = c;
+		y2 = d;
+	}
+
+void Triangle :: show(TCanvas *Canvas)
+	{
+		Canvas->Pen->Color=clGreen;
+        Canvas->Pen->Width=3;
+		if (x2-x1<y2-y1)
+		{
+			Canvas->Rectangle(x1, y1, x2, y1+(x2 - x1));
+		}
+		else
+		{
+			Canvas->Rectangle(x1, y1, x1 + (y2 - y1), y2);
+		}
+	}
+
+float Triangle :: Area()
+	{
+		if (x2-x1<y2-y1)
+		{
+			S = (float)((x2 - x1) * (x2 - x1));
+		}
+		else
+		{
+			S = (float)((y2 - y1) * (y2 - y1));
+		}
+		return S;
+	}
+
+float Triangle :: Perimeter()
+	{
+		if (x2-x1<y2-y1)
+		{
+			P = (float)((x2 - x1) * 4);
+		}
+		else
+		{
+			P = (float)((y2 - y1) * 4);
+		}
+		if (P < 0)
+		{
+			P *= (-1);
+		}
+		return P;
+	}
+
+int Triangle :: XCentMass()
+	{
+		if (x2-x1<y2-y1)
+		{
+			X = x1 + (x2 - x1) / 2;
+		}
+		else
+		{
+			X = x1 + (y2 - y1) / 2;
+		}
+		return X;
+	}
+
+int Triangle :: YCentMass()
+	{
+		if (x2-x1<y2-y1)
+		{
+			Y = y1 + (x2 - x1) / 2;
+		}
+		else
+		{
+			Y = y1 + (y2 - y1) / 2;
+		}
+		return Y;
+	}*/
+
+#pragma package(smart_init)

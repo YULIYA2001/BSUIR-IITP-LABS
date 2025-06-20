@@ -1,0 +1,21 @@
+//---------------------------------------------------------------------------
+
+#ifndef RectH
+#define RectH
+
+class  Rect
+{
+	int x1,y1,x2, y2;
+	public:
+	Rect(){}  //конструктор по умолчанию
+	Rect(int, int, int, int); //конструктор
+    ~Rect(){}   //деструктор
+	virtual void show(TCanvas *Canvas);
+	void moveRight(TCanvas *Canvas);
+	void moveLeft(TCanvas *Canvas);
+	void moveUp(TCanvas *Canvas);
+	void moveDown(TCanvas *Canvas);
+	void hide(TCanvas *Canvas);
+};
+
+#endif

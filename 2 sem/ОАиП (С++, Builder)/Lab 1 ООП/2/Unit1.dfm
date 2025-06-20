@@ -1,0 +1,650 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Figures'
+  ClientHeight = 476
+  ClientWidth = 779
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  OnCreate = FormCreate
+  DesignSize = (
+    779
+    476)
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Image1: TImage
+    Left = 8
+    Top = 8
+    Width = 569
+    Height = 389
+    Anchors = []
+    Proportional = True
+    OnMouseDown = Image1MouseDown
+    OnMouseUp = Image1MouseUp
+  end
+  object RadioGroup1: TRadioGroup
+    Left = 583
+    Top = 8
+    Width = 188
+    Height = 81
+    Anchors = []
+    Caption = 'Figure'
+    Columns = 2
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ItemIndex = 0
+    Items.Strings = (
+      'Circle'
+      'Rectangle'
+      'Square'
+      'Triangle')
+    ParentFont = False
+    TabOrder = 0
+    OnClick = RadioGroup1Click
+  end
+  object Button1: TButton
+    Left = 8
+    Top = 410
+    Width = 57
+    Height = 58
+    Anchors = []
+    Caption = 'Clean'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clBlack
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 1
+    OnClick = Button1Click
+  end
+  object Panel3: TPanel
+    Left = 492
+    Top = 403
+    Width = 160
+    Height = 65
+    Anchors = []
+    Color = clGradientInactiveCaption
+    ParentBackground = False
+    TabOrder = 2
+    DesignSize = (
+      160
+      65)
+    object Label6: TLabel
+      Left = 60
+      Top = 5
+      Width = 38
+      Height = 16
+      Anchors = [akRight, akBottom]
+      Caption = 'Scale '
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold, fsItalic]
+      ParentFont = False
+      ExplicitTop = 3
+    end
+    object Button8: TButton
+      Left = 0
+      Top = 27
+      Width = 54
+      Height = 33
+      Anchors = [akRight, akBottom]
+      Caption = 'BIGGER'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 0
+      OnClick = Button8Click
+      ExplicitTop = 25
+    end
+    object Button9: TButton
+      Left = 104
+      Top = 27
+      Width = 54
+      Height = 34
+      Anchors = [akRight, akBottom]
+      Caption = 'smaller'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 1
+      OnClick = Button9Click
+      ExplicitTop = 25
+    end
+    object Button10: TButton
+      Left = 60
+      Top = 27
+      Width = 38
+      Height = 33
+      Anchors = [akRight, akBottom]
+      Caption = 'STOP'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 2
+      OnClick = Button10Click
+      ExplicitTop = 25
+    end
+  end
+  object Panel4: TPanel
+    Left = 658
+    Top = 405
+    Width = 113
+    Height = 63
+    Anchors = []
+    Color = clGradientInactiveCaption
+    ParentBackground = False
+    TabOrder = 3
+    object Label8: TLabel
+      Left = 40
+      Top = 2
+      Width = 31
+      Height = 16
+      Caption = 'Spin '
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold, fsItalic]
+      ParentFont = False
+    end
+    object Button11: TButton
+      Left = 16
+      Top = 16
+      Width = 42
+      Height = 41
+      Caption = 'Start'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 0
+      OnClick = Button11Click
+    end
+    object Button12: TButton
+      Left = 64
+      Top = 16
+      Width = 42
+      Height = 41
+      Caption = 'Stop'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 1
+      OnClick = Button12Click
+    end
+  end
+  object Panel5: TPanel
+    Left = 323
+    Top = 403
+    Width = 163
+    Height = 65
+    Anchors = []
+    Color = clGradientInactiveCaption
+    ParentBackground = False
+    TabOrder = 4
+    DesignSize = (
+      163
+      65)
+    object Label3: TLabel
+      Left = 39
+      Top = 0
+      Width = 102
+      Height = 16
+      Anchors = [akLeft, akBottom]
+      Caption = 'Center of mass '
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold, fsItalic]
+      ParentFont = False
+    end
+    object Label4: TLabel
+      Left = 12
+      Top = 16
+      Width = 21
+      Height = 16
+      Anchors = [akLeft, akBottom]
+      Caption = 'X ='
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label5: TLabel
+      Left = 13
+      Top = 42
+      Width = 20
+      Height = 16
+      Anchors = [akLeft, akBottom]
+      Caption = 'Y ='
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Edit1: TEdit
+      Left = 39
+      Top = 15
+      Width = 57
+      Height = 21
+      Hint = '0 < X < 650'
+      Anchors = [akLeft, akBottom]
+      NumbersOnly = True
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 0
+      Text = '0'
+    end
+    object Button2: TButton
+      Left = 102
+      Top = 22
+      Width = 46
+      Height = 33
+      Anchors = [akLeft, akBottom]
+      Caption = 'Apply'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 1
+      OnClick = Button2Click
+    end
+    object Edit2: TEdit
+      Left = 39
+      Top = 42
+      Width = 57
+      Height = 21
+      Hint = '0 < Y < 570'
+      Anchors = [akLeft, akBottom]
+      NumbersOnly = True
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 2
+      Text = '0'
+    end
+  end
+  object Panel6: TPanel
+    Left = 199
+    Top = 403
+    Width = 118
+    Height = 65
+    Anchors = []
+    Color = clGradientInactiveCaption
+    ParentBackground = False
+    TabOrder = 5
+    DesignSize = (
+      118
+      65)
+    object Label1: TLabel
+      Left = 25
+      Top = 0
+      Width = 77
+      Height = 16
+      Anchors = [akLeft, akBottom]
+      Caption = 'Figure area '
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold, fsItalic]
+      ParentFont = False
+    end
+    object Panel1: TPanel
+      Left = 8
+      Top = 22
+      Width = 102
+      Height = 33
+      Anchors = [akLeft, akBottom]
+      Color = cl3DLight
+      Enabled = False
+      ParentBackground = False
+      TabOrder = 0
+    end
+  end
+  object Panel7: TPanel
+    Left = 71
+    Top = 403
+    Width = 122
+    Height = 65
+    Anchors = []
+    Color = clGradientInactiveCaption
+    ParentBackground = False
+    TabOrder = 6
+    DesignSize = (
+      122
+      65)
+    object Label2: TLabel
+      Left = 7
+      Top = 1
+      Width = 111
+      Height = 16
+      Anchors = [akLeft, akBottom]
+      Caption = 'Figure perimeter '
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold, fsItalic]
+      ParentFont = False
+    end
+    object Panel2: TPanel
+      Left = 7
+      Top = 23
+      Width = 108
+      Height = 33
+      Anchors = [akLeft, akBottom]
+      Color = cl3DLight
+      Enabled = False
+      ParentBackground = False
+      TabOrder = 0
+    end
+  end
+  object Panel8: TPanel
+    Left = 583
+    Top = 256
+    Width = 188
+    Height = 143
+    Anchors = []
+    Color = clGradientInactiveCaption
+    ParentBackground = False
+    TabOrder = 7
+    DesignSize = (
+      188
+      143)
+    object Label7: TLabel
+      Left = 14
+      Top = 16
+      Width = 39
+      Height = 16
+      Caption = 'Move '
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold, fsItalic]
+      ParentFont = False
+    end
+    object Button3: TButton
+      Left = 92
+      Top = 4
+      Width = 40
+      Height = 40
+      Anchors = [akRight, akBottom]
+      Caption = '^'
+      TabOrder = 0
+      OnClick = Button3Click
+      ExplicitLeft = 71
+    end
+    object Button7: TButton
+      Left = 92
+      Top = 50
+      Width = 40
+      Height = 40
+      Anchors = [akRight, akBottom]
+      Caption = 'STOP'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 1
+      OnClick = Button7Click
+      ExplicitLeft = 71
+    end
+    object Button4: TButton
+      Left = 92
+      Top = 96
+      Width = 40
+      Height = 40
+      Anchors = [akRight, akBottom]
+      Caption = 'V'
+      TabOrder = 2
+      OnClick = Button4Click
+      ExplicitLeft = 71
+    end
+    object Button6: TButton
+      Left = 46
+      Top = 50
+      Width = 40
+      Height = 40
+      Anchors = [akRight, akBottom]
+      Caption = '<'
+      TabOrder = 3
+      OnClick = Button6Click
+      ExplicitLeft = 25
+    end
+    object Button5: TButton
+      Left = 138
+      Top = 50
+      Width = 40
+      Height = 40
+      Anchors = [akRight, akBottom]
+      Caption = '>'
+      TabOrder = 4
+      OnClick = Button5Click
+      ExplicitLeft = 117
+    end
+  end
+  object Panel9: TPanel
+    Left = 583
+    Top = 97
+    Width = 188
+    Height = 153
+    Anchors = []
+    Color = clGradientInactiveCaption
+    ParentBackground = False
+    TabOrder = 8
+    object Label9: TLabel
+      Left = 34
+      Top = 0
+      Width = 103
+      Height = 14
+      Caption = 'New parameters '
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold, fsItalic]
+      ParentFont = False
+    end
+    object Label10: TLabel
+      Left = 24
+      Top = 105
+      Width = 52
+      Height = 13
+      Caption = 'radius/side'
+    end
+    object Label11: TLabel
+      Left = 16
+      Top = 92
+      Width = 63
+      Height = 16
+      Caption = 'For  others'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label12: TLabel
+      Left = 14
+      Top = 38
+      Width = 20
+      Height = 13
+      Caption = 'x1='
+    end
+    object Label13: TLabel
+      Left = 14
+      Top = 65
+      Width = 20
+      Height = 13
+      Caption = 'x2='
+    end
+    object Label14: TLabel
+      Left = 101
+      Top = 38
+      Width = 20
+      Height = 13
+      Caption = 'y1='
+    end
+    object Label15: TLabel
+      Left = 103
+      Top = 65
+      Width = 20
+      Height = 13
+      Caption = 'y2='
+    end
+    object Label16: TLabel
+      Left = 45
+      Top = 16
+      Width = 76
+      Height = 16
+      Caption = 'For rectangle'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Edit3: TEdit
+      Left = 21
+      Top = 124
+      Width = 50
+      Height = 21
+      NumbersOnly = True
+      TabOrder = 0
+      Text = '0'
+    end
+    object Button13: TButton
+      Left = 109
+      Top = 103
+      Width = 65
+      Height = 34
+      Caption = 'Change'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 1
+      OnClick = Button13Click
+    end
+    object Edit4: TEdit
+      Left = 40
+      Top = 38
+      Width = 41
+      Height = 21
+      NumbersOnly = True
+      TabOrder = 2
+    end
+    object Edit5: TEdit
+      Left = 129
+      Top = 38
+      Width = 40
+      Height = 21
+      NumbersOnly = True
+      TabOrder = 3
+    end
+    object Edit6: TEdit
+      Left = 40
+      Top = 65
+      Width = 41
+      Height = 21
+      NumbersOnly = True
+      TabOrder = 4
+    end
+    object Edit7: TEdit
+      Left = 129
+      Top = 65
+      Width = 40
+      Height = 21
+      NumbersOnly = True
+      TabOrder = 5
+    end
+  end
+  object Timer1: TTimer
+    Enabled = False
+    Interval = 100
+    OnTimer = Timer1Timer
+    Left = 200
+    Top = 32
+  end
+  object Timer2: TTimer
+    Enabled = False
+    Interval = 100
+    OnTimer = Timer2Timer
+    Left = 160
+    Top = 32
+  end
+  object Timer3: TTimer
+    Enabled = False
+    Interval = 100
+    OnTimer = Timer3Timer
+    Left = 120
+    Top = 32
+  end
+  object Timer4: TTimer
+    Enabled = False
+    Interval = 100
+    OnTimer = Timer4Timer
+    Left = 80
+    Top = 32
+  end
+  object Timer5: TTimer
+    Enabled = False
+    Interval = 100
+    OnTimer = Timer5Timer
+    Left = 80
+    Top = 96
+  end
+  object Timer6: TTimer
+    Enabled = False
+    Interval = 100
+    OnTimer = Timer6Timer
+    Left = 120
+    Top = 96
+  end
+  object Timer7: TTimer
+    Enabled = False
+    Interval = 100
+    OnTimer = Timer7Timer
+    Left = 80
+    Top = 152
+  end
+end

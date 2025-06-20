@@ -1,0 +1,18 @@
+//---------------------------------------------------------------------------
+
+#ifndef RectH
+#define RectH
+
+#include "Figure.h"
+
+class  Rectan : public Figure
+{
+	int x1,y1,x2,y2;
+	public:
+	Rectan(){}  //конструктор по умолчанию
+	Rectan(int, int, int, int); //конструктор
+	~Rectan(){}   //деструктор
+	void show(TCanvas *Canvas);
+};
+
+#endif

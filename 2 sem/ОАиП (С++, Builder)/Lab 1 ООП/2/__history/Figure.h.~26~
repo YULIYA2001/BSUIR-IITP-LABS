@@ -1,0 +1,28 @@
+//---------------------------------------------------------------------------
+
+#ifndef FigureH
+#define FigureH
+
+class Figure
+{
+	public:
+	virtual void show(TCanvas *Canvas)=0;    //чисто виртуальная функция вывода на канву
+	virtual float Area()=0;                  //чисто виртуальная функция нахождения площади
+	virtual float Perimeter()=0;             //чисто виртуальная функция нахождения периметра
+	virtual int XCentMass()=0;              //чисто виртуальные функции
+	virtual int YCentMass()=0;              //            нахождения центра масс (X, Y)
+	float mod(float);                       //нахождение
+	int mod(int);                           //         модудя числа
+	virtual void hide(TCanvas *Canvas)=0;   //чисто виртуальная функция для скрытия
+	virtual void Set(int, int, int, int)=0;
+	void moveUp(int, int &, int, int &);       			  //движение вверх
+	void moveDown(int, int &, int, int &);     			  //движение вниз
+	void moveRight(int &, int, int &, int);    			  //движение вправо
+	void moveLeft(int &, int, int &, int);     			  //движение влево
+	void Smaller(int &, int &, int &, int &);         		  //уменьшение
+	void Bigger(int &, int &, int &, int &);																		  //увеличение
+	void Rotation(int, int, int &, int &, int &, int &);     //вращение
+
+};
+
+#endif

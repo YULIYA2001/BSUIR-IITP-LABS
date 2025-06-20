@@ -1,0 +1,46 @@
+//---------------------------------------------------------------------------
+
+#pragma hdrstop
+
+#include "Rect.h"
+
+Rectan :: Rectan(int a, int b, int c, int d)
+	{
+		x1 = a;
+		y1 = b;
+		x2 = c;
+		y2 = d;
+	}
+
+void Rectan :: show(TCanvas *Canvas)
+	{
+		Canvas->Pen->Color=clRed;
+		Canvas->Pen->Width=3;
+		Canvas->Rectangle(x1,y1,x2,y2);
+	}
+
+float Rectan :: Area()
+	{
+		S = (float)((x2 - x1) * (y2 - y1));
+		return S;
+	}
+
+float Rectan :: Perimeter()
+	{
+		P = (float)(((x2 - x1) + (y2 - y1)) * 2);
+        P = mod(P);
+		return P;
+	}
+int Rectan :: XCentMass()
+	{
+		X = x1 + (x2 - x1) / 2;
+		return X;
+	}
+
+int Rectan :: YCentMass()
+	{
+		Y = y1 + (y2 - y1) / 2;
+		return Y;
+	}
+
+#pragma package(smart_init)

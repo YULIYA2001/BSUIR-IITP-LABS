@@ -1,0 +1,12 @@
+C:\УЧЁБА\ИСП\2 сем\Lab1\MatrixCalculator\MatrixCalculator\bin\Debug\MatrixCalculator.exe.config
+C:\УЧЁБА\ИСП\2 сем\Lab1\MatrixCalculator\MatrixCalculator\bin\Debug\MatrixCalculator.exe
+C:\УЧЁБА\ИСП\2 сем\Lab1\MatrixCalculator\MatrixCalculator\bin\Debug\MatrixCalculator.pdb
+C:\УЧЁБА\ИСП\2 сем\Lab1\MatrixCalculator\MatrixCalculator\obj\Debug\MatrixCalculator.csprojAssemblyReference.cache
+C:\УЧЁБА\ИСП\2 сем\Lab1\MatrixCalculator\MatrixCalculator\obj\Debug\MatrixCalculator.exe
+C:\УЧЁБА\ИСП\2 сем\Lab1\MatrixCalculator\MatrixCalculator\obj\Debug\MatrixCalculator.pdb
+C:\УЧЁБА\ИСП\2 сем\Lab1\MatrixCalculator(framework)\MatrixCalculator\obj\Debug\MatrixCalculator.csprojAssemblyReference.cache
+C:\УЧЁБА\ИСП\2 сем\Lab1\MatrixCalculator(framework)\MatrixCalculator\obj\Debug\MatrixCalculator.exe
+C:\УЧЁБА\ИСП\2 сем\Lab1\MatrixCalculator(framework)\MatrixCalculator\obj\Debug\MatrixCalculator.pdb
+C:\УЧЁБА\ИСП\2 сем\Lab1\MatrixCalculator(framework)\MatrixCalculator\bin\Debug\MatrixCalculator.exe.config
+C:\УЧЁБА\ИСП\2 сем\Lab1\MatrixCalculator(framework)\MatrixCalculator\bin\Debug\MatrixCalculator.exe
+C:\УЧЁБА\ИСП\2 сем\Lab1\MatrixCalculator(framework)\MatrixCalculator\bin\Debug\MatrixCalculator.pdb

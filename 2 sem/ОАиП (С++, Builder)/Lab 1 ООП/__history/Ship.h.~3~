@@ -1,0 +1,18 @@
+//---------------------------------------------------------------------------
+
+#ifndef ShipH
+#define ShipH
+
+#include "Rect.h"
+
+class  Ship: public Rect
+{
+	int x1,y1;
+	public:
+	Ship(){}  //конструктор по умолчанию
+	Ship(int, int);//конструктор
+	~Ship(){}   //деструктор
+	void show(TCanvas *Canvas);
+};
+
+#endif

@@ -1,0 +1,27 @@
+//---------------------------------------------------------------------------
+
+#ifndef TriangleH
+#define TriangleH
+
+#include "Figure.h"
+
+class  Triangle : public Figure
+{
+	int x1,y1,x2,y2;
+	float S, P, helpSide;
+	int X, Y;
+	public:
+	Triangle(){}  //конструктор по умолчанию
+	Triangle(int, int, int, int); //конструктор
+	~Triangle(){}   //деструктор
+    void Set(int, int, int, int);
+	void show(TCanvas *Canvas);
+	float Area();
+	float Perimeter();
+	int XCentMass();
+	int YCentMass();
+	void hide(TCanvas *Canvas);
+    void change(float, int &, int &, int &, int &);  //изменение длины стороны
+};
+
+#endif

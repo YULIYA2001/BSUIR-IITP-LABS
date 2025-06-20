@@ -1,0 +1,115 @@
+//---------------------------------------------------------------------------
+
+#pragma hdrstop
+
+#include "Circle.h"
+#define PI 3.14159265358979323846
+
+Circle :: Circle(int a, int b, int c, int d)
+	{
+		x1 = a;
+		y1 = b;
+		x2 = c;
+		y2 = d;
+	}
+
+void Circle :: Set(int a, int b, int c, int d)
+	{
+		x1 = a;
+		y1 = b;
+		x2 = c;
+		y2 = d;
+	}
+
+void Circle :: show(TCanvas *Canvas)
+	{
+		Canvas->Pen->Color=clYellow;
+		Canvas->Pen->Width=3;
+		if (x2-x1<y2-y1)
+		{
+			Canvas->Ellipse(x1, y1, x2, y1 + (x2 - x1));
+		}
+		else
+		{
+			Canvas->Ellipse(x1, y1, x1 + (y2 - y1), y2);
+		}
+	}
+
+float Circle :: Area()
+	{
+		if (x2-x1<y2-y1)
+		{
+			S = (float)(PI * (x2 - x1) * (x2 - x1) / 4);
+		}
+		else
+		{
+			S = (float)(PI * (y2 - y1) * (y2 - y1) / 4);
+		}
+        S = mod(S);
+		return S;
+	}
+
+float Circle :: Perimeter()
+	{
+		if (x2-x1<y2-y1)
+		{
+			P = (float)(PI * (x2 - x1));
+		}
+		else
+		{
+			P = (float)(PI * (y2 - y1));
+		}
+		P = mod(P);
+		return P;
+	}
+
+int Circle :: XCentMass()
+	{
+		if (x2-x1<y2-y1)
+		{
+			X = x1 + (x2 - x1) / 2;
+		}
+		else
+		{
+			X = x1 + (y2 - y1) / 2;
+		}
+		return X;
+	}
+
+int Circle :: YCentMass()
+	{
+		if (x2-x1<y2-y1)
+		{
+			Y = y1 + (x2 - x1) / 2;
+		}
+		else
+		{
+			Y = y1 + (y2 - y1) / 2;
+		}
+		return Y;
+	}
+
+void Circle :: hide(TCanvas *Canvas)
+	{
+		Canvas->Pen->Color=clWhite;
+		Canvas->Pen->Width=3;
+		if (x2-x1<y2-y1)
+		{
+			Canvas->Ellipse(x1, y1, x2, y1 + (x2 - x1));
+		}
+		else
+		{
+			Canvas->Ellipse(x1, y1, x1 + (y2 - y1), y2);
+		}
+	}
+
+void Circle :: change(int rad, int &x1, int &y1, int &x2, int &y2)
+	{
+
+		x1 =  C.XCentMass() - rad;
+		y1 =  C.YCentMass() - rad;
+		x2 =  C.XCentMass() + rad;
+		y2 =  C.YCentMass() + rad;
+    }
+
+#pragma package(smart_init)
