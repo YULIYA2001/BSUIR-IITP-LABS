@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: DARKGREEN;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.AuthorizeController">
+   <children>
+      <Button fx:id="loginSignUpButton" layoutX="521.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="180.0" style="-fx-background-color: DARKGREEN;" text="Зарегистрироваться" textFill="#f2f10c" underline="true">
+         <font>
+            <Font name="Segoe Print Bold" size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="201.0" prefHeight="97.0" prefWidth="326.0" text="Чиполлино" textFill="PALEGREEN">
+         <font>
+            <Font name="Segoe Print Bold" size="54.0" />
+         </font>
+      </Label>
+      <Label layoutX="265.0" layoutY="81.0" prefHeight="32.0" prefWidth="171.0" text="Фрукты и овощи" textFill="PALEGREEN">
+         <font>
+            <Font name="Segoe Print" size="18.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="-6.0" layoutY="115.0" prefHeight="286.0" prefWidth="707.0" style="-fx-background-color: PALEGREEN;">
+         <children>
+            <TextField fx:id="login_field" layoutX="247.0" layoutY="82.0" prefHeight="25.0" prefWidth="295.0" promptText="Логин" style="-fx-border-color: #006400; -fx-border-radius: 5;">
+               <font>
+                  <Font name="Segoe Print" size="14.0" />
+               </font>
+            </TextField>
+            <PasswordField fx:id="password_field" layoutX="247.0" layoutY="143.0" prefHeight="25.0" prefWidth="295.0" promptText="Пароль" style="-fx-border-color: DARKGREEN; -fx-border-radius: 5;">
+               <font>
+                  <Font name="Segoe Print" size="14.0" />
+               </font>
+            </PasswordField>
+            <Button fx:id="enterSignInButton" layoutX="288.0" layoutY="187.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="214.0" style="-fx-background-color: PALEGREEN;" text="Войти" textFill="DARKGREEN" underline="true">
+               <font>
+                  <Font name="Segoe Print Bold" size="25.0" />
+               </font>
+            </Button>
+            <Label layoutX="296.0" layoutY="14.0" prefHeight="37.0" prefWidth="254.0" text="Авторизация" textFill="DARKGREEN">
+               <font>
+                  <Font name="Segoe Print Bold" size="29.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="onionImage" fitHeight="266.0" fitWidth="200.0" layoutX="30.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Чиполлино.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="easterEggButton" layoutX="76.0" layoutY="41.0" mnemonicParsing="false" opacity="0.0" prefHeight="18.0" prefWidth="24.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

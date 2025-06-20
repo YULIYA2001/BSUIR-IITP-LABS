@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<?import sample.maskForPhone.MaskField?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: DARKGREEN;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.PersonalCabinetController">
+    <children>
+        <Label layoutX="59.0" layoutY="3.0" prefHeight="43.0" prefWidth="145.0" text="Чиполлино" textFill="PALEGREEN">
+            <font>
+                <Font name="Segoe Print Bold" size="24.0" />
+            </font>
+        </Label>
+        <AnchorPane layoutX="-6.0" layoutY="68.0" prefHeight="333.0" prefWidth="707.0" style="-fx-background-color: PALEGREEN;">
+         <children>
+            <Label layoutX="31.0" layoutY="62.0" prefHeight="25.0" prefWidth="43.0" text="Имя:" textFill="DARKGREEN">
+               <font>
+                  <Font name="Segoe Print Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="31.0" layoutY="17.0" prefHeight="25.0" prefWidth="125.0" text="Фамилия:" textFill="DARKGREEN">
+               <font>
+                  <Font name="Segoe Print Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="33.0" layoutY="109.0" prefHeight="25.0" prefWidth="103.0" text="Отчество:" textFill="DARKGREEN">
+               <font>
+                  <Font name="Segoe Print Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="31.0" layoutY="198.0" prefHeight="25.0" prefWidth="125.0" text="Адрес доставки:" textFill="DARKGREEN">
+               <font>
+                  <Font name="Segoe Print Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="31.0" layoutY="241.0" prefHeight="25.0" prefWidth="54.0" text="Логин:" textFill="DARKGREEN">
+               <font>
+                  <Font name="Segoe Print Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="31.0" layoutY="154.0" prefHeight="25.0" prefWidth="69.0" text="Телефон:" textFill="DARKGREEN">
+               <font>
+                  <Font name="Segoe Print Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="surnameTextField" focusTraversable="false" layoutX="169.0" layoutY="17.0" prefHeight="28.0" prefWidth="286.0" style="-fx-border-color: #006400; -fx-border-radius: 3; -fx-background-color: #98fb98;">
+               <font>
+                  <Font name="Segoe Print" size="12.0" />
+               </font></TextField>
+            <Label layoutX="31.0" layoutY="287.0" prefHeight="25.0" prefWidth="69.0" text="Пароль:" textFill="DARKGREEN">
+               <font>
+                  <Font name="Segoe Print Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="passwordTextField" focusTraversable="false" layoutX="169.0" layoutY="286.0" prefHeight="28.0" prefWidth="286.0" style="-fx-border-color: #006400; -fx-border-radius: 3; -fx-background-color: #98fb98;">
+               <font>
+                  <Font name="Segoe Print" size="12.0" />
+               </font></TextField>
+            <Label layoutX="535.0" layoutY="134.0" prefHeight="25.0" prefWidth="69.0" text="Статус:" textFill="DARKGREEN">
+               <font>
+                  <Font name="Segoe Print Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="480.0" layoutY="11.0" prefHeight="102.0" prefWidth="201.0" text="Личный &#10;    кабинет&#10;" textFill="DARKGREEN">
+               <font>
+                  <Font name="Segoe Print Bold" size="30.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="43.0" fitWidth="43.0" layoutX="619.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/person.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="statusImageView" fitHeight="50.0" fitWidth="54.0" layoutX="641.0" layoutY="142.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="acceptChangesButton" layoutX="480.0" layoutY="262.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="90.0" style="-fx-background-color: #006400;" text="Применить&#10;изменения" textAlignment="CENTER" textFill="PALEGREEN">
+               <font>
+                  <Font name="Segoe Print Bold" size="12.0" />
+               </font>
+            </Button>
+            <TextField fx:id="nameTextField" focusTraversable="false" layoutX="169.0" layoutY="58.0" prefHeight="28.0" prefWidth="286.0" style="-fx-border-color: #006400; -fx-border-radius: 3; -fx-background-color: #98fb98;">
+               <font>
+                  <Font name="Segoe Print" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="patronymicTextField" focusTraversable="false" layoutX="169.0" layoutY="105.0" prefHeight="0.0" prefWidth="286.0" style="-fx-border-color: #006400; -fx-border-radius: 3; -fx-background-color: #98fb98;">
+               <font>
+                  <Font name="Segoe Print" size="12.0" />
+               </font>
+            </TextField>
+            <MaskField mask="+375(DD)DDD-DD-DD" fx:id="phoneTextField" focusTraversable="false" layoutX="169.0" layoutY="149.0" prefHeight="28.0" prefWidth="286.0" style="-fx-border-color: #006400; -fx-border-radius: 3; -fx-background-color: #98fb98;">
+               <font>
+                  <Font name="Segoe Print" size="12.0" />
+               </font>
+            </MaskField>
+            <TextField fx:id="addressTextField" focusTraversable="false" layoutX="169.0" layoutY="194.0" prefHeight="28.0" prefWidth="286.0" style="-fx-border-color: #006400; -fx-border-radius: 3; -fx-background-color: #98fb98;">
+               <font>
+                  <Font name="Segoe Print" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="loginTextField" editable="false" layoutX="169.0" layoutY="237.0" prefHeight="28.0" prefWidth="286.0" style="-fx-border-color: #006400; -fx-border-radius: 3; -fx-background-color: #98fb98;">
+               <font>
+                  <Font name="Segoe Print" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="statusTextField" editable="false" layoutX="507.0" layoutY="165.0" prefHeight="33.0" prefWidth="125.0" style="-fx-border-color: #006400; -fx-border-radius: 3; -fx-background-color: #98fb98;">
+               <font>
+                  <Font name="Segoe Print" size="12.0" />
+               </font>
+            </TextField>
+         </children></AnchorPane>
+        <Label layoutX="76.0" layoutY="29.0" prefHeight="32.0" prefWidth="111.0" text="Фрукты и овощи" textFill="PALEGREEN">
+            <font>
+                <Font name="Segoe Print" size="12.0" />
+            </font>
+        </Label>
+        <ImageView fitHeight="39.0" fitWidth="35.0" layoutX="14.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../images/onion.png" />
+            </image>
+        </ImageView>
+      <Button fx:id="backButton" alignment="BOTTOM_CENTER" layoutX="616.0" layoutY="11.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="69.0" style="-fx-background-color: #006400; -fx-background-image: url('file:C:/YCHEBA/4сем/ООП/Project/src/sample/images/стрелка.png');" text="Назад" textFill="PALEGREEN" underline="true">
+         <font>
+            <Font name="Segoe Print Bold" size="14.0" />
+         </font>
+      </Button>
+    </children>
+</AnchorPane>

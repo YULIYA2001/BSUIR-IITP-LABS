@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="187.0" prefWidth="323.0" style="-fx-background-color: #510707; -fx-border-color: #d71212; -fx-border-width: 5;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.FaultController">
+    <children>
+        <AnchorPane layoutX="10.0" layoutY="43.0" prefHeight="134.0" prefWidth="321.0" style="-fx-background-color: #e64d4d;">
+            <children>
+                <Label layoutX="121.0" layoutY="7.0" text="Ошибка!" textFill="#510707">
+                    <font>
+                        <Font name="Segoe Print Bold" size="18.0" />
+                    </font>
+                </Label>
+                <Button fx:id="faultOkButton" layoutX="130.0" layoutY="67.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="62.0" style="-fx-background-color: #E64D4D; -fx-border-color: #510707; -fx-border-radius: 10; -fx-border-width: 3; -fx-background-image: url('file:C:/YCHEBA/4сем/ООП/Project/src/sample/images/OkRed.png');" />
+            <Label layoutX="113.0" layoutY="39.0" text="Неверные данные" textFill="#510707">
+               <font>
+                  <Font name="Segoe Print Bold" size="11.0" />
+               </font>
+            </Label>
+            </children>
+        </AnchorPane>
+        <Label layoutX="14.0" text="Чиполлино" textFill="#e64d4d">
+            <font>
+                <Font name="Segoe Print Bold" size="24.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

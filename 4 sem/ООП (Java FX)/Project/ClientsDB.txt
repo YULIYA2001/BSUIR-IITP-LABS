@@ -1,0 +1,4 @@
+{"address":"Minsk","login":"bob123","name":"Bob","password":"123","patronymic":"-","phoneNumber":"+37529888787877","status":"NO","surname":"Smith"}
+{"address":"1","login":"1","name":"1","password":"1","patronymic":"1","phoneNumber":"+375(56)545-56-56","status":"PLATINUM","surname":"1"}
+{"address":"Minsk","login":"Julia10","name":"Yuliya","password":"987654321","patronymic":"-","phoneNumber":"+375(29)624-97-05","status":"DIAMOND","surname":"Golubovich"}
+{"address":"укепнрго","login":"111","name":"цуапро","password":"111","patronymic":"цукен","phoneNumber":"+375(84)587-45-87","status":"NO","surname":"укенорпавыпролджрпавапролджэждло"}

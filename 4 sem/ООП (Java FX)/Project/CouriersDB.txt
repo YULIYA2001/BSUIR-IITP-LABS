@@ -1,0 +1,3 @@
+{"courierId":1,"name":"Иван","patronymic":"Иванович","phoneNumber":"+375291112233","surname":"Иванов"}
+{"courierId":2,"name":"Петр","patronymic":"Петрович","phoneNumber":"+375291112233","surname":"Петров"}
+{"courierId":3,"name":"ывапролд","patronymic":"ывапроь","phoneNumber":"+375(54)545-41-54","surname":"вапрол"}

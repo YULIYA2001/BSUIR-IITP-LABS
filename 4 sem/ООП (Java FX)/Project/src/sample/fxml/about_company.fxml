@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: DARKGREEN;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.AboutCompanyController">
+    <children>
+        <Label layoutX="76.0" layoutY="29.0" prefHeight="32.0" prefWidth="111.0" text="Фрукты и овощи" textFill="PALEGREEN">
+            <font>
+                <Font name="Segoe Print" size="12.0" />
+            </font>
+        </Label>
+        <Label layoutX="59.0" layoutY="3.0" prefHeight="43.0" prefWidth="145.0" text="Чиполлино" textFill="PALEGREEN">
+            <font>
+                <Font name="Segoe Print Bold" size="24.0" />
+            </font>
+        </Label>
+        <AnchorPane layoutX="-6.0" layoutY="68.0" prefHeight="333.0" prefWidth="707.0" style="-fx-background-color: PALEGREEN;">
+            <children>
+                <Label layoutX="367.0" text="О нас" textFill="DARKGREEN">
+                    <font>
+                        <Font name="Segoe Print Bold" size="24.0" />
+                    </font>
+                </Label>
+                <TextArea fx:id="aboutCompanyTextArea" editable="false" layoutX="92.0" layoutY="75.0" prefHeight="255.0" prefWidth="609.0" style="-fx-border-color: #006400; -fx-border-radius: 5; -fx-border-width: 3; -fx-background-color: #98fb98;" wrapText="true">
+               <font>
+                  <Font name="Segoe Print" size="12.0" />
+               </font></TextArea>
+            <Label layoutX="185.0" layoutY="43.0" text="Торговля овощами и фруктами в Минске. Доставка. Упаковка." textFill="DARKGREEN">
+               <font>
+                  <Font name="Segoe Print Bold" size="13.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="333.0" fitWidth="93.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/овощи.jpg" />
+               </image>
+            </ImageView>
+            </children></AnchorPane>
+        <ImageView fitHeight="39.0" fitWidth="35.0" layoutX="14.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../images/onion.png" />
+            </image>
+        </ImageView>
+        <Button fx:id="backButton" alignment="BOTTOM_CENTER" layoutX="622.0" layoutY="12.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="71.0" style="-fx-background-color: #006400; -fx-background-image: url('file:C:/YCHEBA/4сем/ООП/Project/src/sample/images/стрелка.png'); -fx-border-color: #006400;" text="Назад" textFill="PALEGREEN" underline="true">
+            <font>
+                <Font name="Segoe Print Bold" size="14.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>

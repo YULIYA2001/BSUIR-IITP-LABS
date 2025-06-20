@@ -1,0 +1,5 @@
+{"address":"Minsk","clientStatus":"NO","login":"Julia10","name":"Yuliya","password":"987654321","patronymic":"-","phoneNumber":"+375296249705","surname":"Golubovich"}
+{"address":"Brest","clientStatus":"NO","login":"ahaha","name":"Bobic","password":"00880088","patronymic":"Ivanovich","phoneNumber":"+37529008800880","surname":"Asma"}
+{"address":"Gomel","clientStatus":"NO","login":"lopric","name":"Anna","password":"123456","patronymic":"-","phoneNumber":"+375441234567","surname":"Annava"}
+{"address":"1","clientStatus":"NO","login":"1","name":"1","password":"1","patronymic":"1","phoneNumber":"1","surname":"1"}
+{"address":"г.Минск, ул.Прушинских, д.29","clientStatus":"NO","login":"Леха","name":"Алексей","password":"111222","patronymic":"Семенович","phoneNumber":"+375441568795","surname":"Ромдвам"}

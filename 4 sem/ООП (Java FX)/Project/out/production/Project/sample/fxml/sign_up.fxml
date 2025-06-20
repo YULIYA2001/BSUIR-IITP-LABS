@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<!--сторонняя библиотека-->
+<?import sample.maskForPhone.MaskField?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: DARKGREEN;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.SignUpController">
+    <children>
+        <Label layoutX="201.0" prefHeight="97.0" prefWidth="326.0" text="Чиполлино" textFill="PALEGREEN">
+            <font>
+                <Font name="Segoe Print Bold" size="54.0" />
+            </font>
+        </Label>
+        <Label layoutX="265.0" layoutY="81.0" prefHeight="32.0" prefWidth="171.0" text="Фрукты и овощи" textFill="PALEGREEN">
+            <font>
+                <Font name="Segoe Print" size="18.0" />
+            </font>
+        </Label>
+          <ImageView fitHeight="82.0" fitWidth="66.0" layoutX="23.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                  <Image url="@../images/Чиполлино.png" />
+              </image>
+          </ImageView>
+        <Button fx:id="backButton" alignment="BOTTOM_CENTER" layoutX="614.0" layoutY="11.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="71.0" style="-fx-background-color: #006400; -fx-background-image: url('file:C:/YCHEBA/4сем/ООП/Project/src/sample/images/стрелка.png'); -fx-border-color: #006400;" text="Назад" textFill="PALEGREEN" underline="true">
+            <font>
+                <Font name="Segoe Print Bold" size="14.0" />
+            </font>
+        </Button>
+        <AnchorPane layoutX="-7.0" layoutY="115.0" prefHeight="286.0" prefWidth="708.0" style="-fx-background-color: PALEGREEN;">
+            <children>
+            <TextField fx:id="signUpSurname" layoutX="43.0" layoutY="23.0" prefHeight="25.0" prefWidth="295.0" promptText="Фамилия" style="-fx-border-color: #006400; -fx-border-radius: 5;">
+               <font>
+                  <Font name="Segoe Print" size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="signUpName" layoutX="371.0" layoutY="23.0" prefHeight="25.0" prefWidth="295.0" promptText="Имя" style="-fx-border-color: #006400; -fx-border-radius: 5;">
+               <font>
+                  <Font name="Segoe Print" size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="signUpPatronymic" layoutX="43.0" layoutY="68.0" prefHeight="25.0" prefWidth="295.0" promptText="Отчество" style="-fx-border-color: #006400; -fx-border-radius: 5;">
+               <font>
+                  <Font name="Segoe Print" size="14.0" />
+               </font>
+            </TextField>
+            <MaskField mask="+375(DD)DDD-DD-DD" fx:id="signUpPhone" layoutX="43.0" layoutY="113.0" prefHeight="25.0" prefWidth="295.0" promptText="+375(00)0000000" style="-fx-border-color: #006400; -fx-border-radius: 5;">
+               <font>
+                  <Font name="Segoe Print" size="14.0" />
+               </font>
+            </MaskField>
+            <TextField fx:id="signUpAddress" layoutX="371.0" layoutY="113.0" prefHeight="25.0" prefWidth="295.0" promptText="Адрес доставки" style="-fx-border-color: #006400; -fx-border-radius: 5;">
+               <font>
+                  <Font name="Segoe Print" size="14.0" />
+               </font>
+            </TextField>
+                <TextField fx:id="signUpLogin" layoutX="43.0" layoutY="161.0" prefHeight="25.0" prefWidth="295.0" promptText="Логин" style="-fx-border-color: #006400; -fx-border-radius: 5;">
+                    <font>
+                        <Font name="Segoe Print" size="14.0" />
+                    </font>
+                </TextField>
+            <TextField fx:id="signUpPassword" layoutX="371.0" layoutY="161.0" prefHeight="25.0" prefWidth="295.0" promptText="Пароль" style="-fx-border-color: #006400; -fx-border-radius: 5;">
+               <font>
+                  <Font name="Segoe Print" size="14.0" />
+               </font>
+            </TextField>
+                <Button fx:id="signUpConfirmButton" layoutX="499.0" layoutY="225.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="149.0" style="-fx-background-color: PALEGREEN;" text="Подтвердить" textFill="DARKGREEN" underline="true">
+                    <font>
+                        <Font name="Segoe Print Bold" size="17.0" />
+                    </font>
+                </Button>
+            <Label layoutX="43.0" layoutY="212.0" text="* - обязательное поле" textFill="RED">
+               <font>
+                  <Font name="Segoe Print" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="340.0" layoutY="10.0" text="*" textFill="RED">
+               <font>
+                  <Font name="Segoe Print" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="671.0" layoutY="10.0" text="*" textFill="RED">
+               <font>
+                  <Font name="Segoe Print" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="340.0" layoutY="100.0" text="*" textFill="RED">
+               <font>
+                  <Font name="Segoe Print" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="340.0" layoutY="148.0" text="*" textFill="RED">
+               <font>
+                  <Font name="Segoe Print" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="671.0" layoutY="98.0" text="*" textFill="RED">
+               <font>
+                  <Font name="Segoe Print" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="671.0" layoutY="148.0" text="*" textFill="RED">
+               <font>
+                  <Font name="Segoe Print" size="18.0" />
+               </font>
+            </Label>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

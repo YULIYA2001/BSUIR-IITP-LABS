@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="187.0" prefWidth="323.0" style="-fx-background-color: #006400; -fx-border-color: #2FF72F; -fx-border-width: 5;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.SuccessAddToCartController">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="43.0" prefHeight="134.0" prefWidth="321.0" style="-fx-background-color: #98fb98;">
+         <children>
+            <Label fx:id="successLabel" layoutX="42.0" layoutY="14.0" text="Товар добавлен в корзину" textFill="DARKGREEN">
+               <font>
+                  <Font name="Segoe Print Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="successAddOkButton" layoutX="126.0" layoutY="57.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="69.0" style="-fx-background-color: #98fb98; -fx-border-color: #006400; -fx-border-radius: 10; -fx-border-width: 3; -fx-background-image: url('file:C:/YCHEBA/4сем/ООП/Project/src/sample/images/Okey.png');" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="14.0" text="Чиполлино" textFill="PALEGREEN">
+         <font>
+            <Font name="Segoe Print Bold" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

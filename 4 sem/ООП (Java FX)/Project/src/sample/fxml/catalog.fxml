@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: DARKGREEN;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.CatalogController">
+    <children>
+        <Label layoutX="59.0" layoutY="3.0" prefHeight="43.0" prefWidth="145.0" text="Чиполлино" textFill="PALEGREEN">
+            <font>
+                <Font name="Segoe Print Bold" size="24.0" />
+            </font>
+        </Label>
+        <AnchorPane layoutX="-6.0" layoutY="68.0" prefHeight="333.0" prefWidth="707.0" style="-fx-background-color: PALEGREEN;">
+         <children>
+            <ImageView fitHeight="88.0" fitWidth="88.0" layoutX="34.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/apple.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="64.0" fitWidth="145.0" layoutX="250.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/cucumber.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="109.0" fitWidth="80.0" layoutX="39.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/pear.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="64.0" fitWidth="98.0" layoutX="560.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/potatoes.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="98.0" fitWidth="105.0" layoutX="272.0" layoutY="176.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/tomato.jpg" />
+               </image>
+            </ImageView>
+            <Button fx:id="appleButton" layoutX="35.0" layoutY="108.0" mnemonicParsing="false" style="-fx-background-color: PALEGREEN;" text="Яблоко" textFill="DARKGREEN" underline="true">
+               <font>
+                  <Font name="Segoe Print Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="cucumberButton" layoutX="275.0" layoutY="108.0" mnemonicParsing="false" style="-fx-background-color: PALEGREEN;" text="Огурец" textFill="DARKGREEN" underline="true">
+               <font>
+                  <Font name="Segoe Print Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="potatoButton" layoutX="540.0" layoutY="108.0" mnemonicParsing="false" style="-fx-background-color: PALEGREEN;" text="Картофель" textFill="DARKGREEN" underline="true">
+               <font>
+                  <Font name="Segoe Print Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="pearButton" layoutX="36.0" layoutY="267.0" mnemonicParsing="false" style="-fx-background-color: PALEGREEN;" text="Груша" textFill="DARKGREEN" underline="true">
+               <font>
+                  <Font name="Segoe Print Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="tomatoButton" layoutX="276.0" layoutY="267.0" mnemonicParsing="false" style="-fx-background-color: PALEGREEN;" text="Томат" textFill="DARKGREEN" underline="true">
+               <font>
+                  <Font name="Segoe Print Bold" size="18.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="143.0" fitWidth="145.0" layoutX="474.0" layoutY="167.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/cart.jpg" />
+               </image>
+            </ImageView>
+            <Button fx:id="cartButton" alignment="BOTTOM_CENTER" layoutX="536.0" layoutY="265.0" mnemonicParsing="false" opacity="0.7" prefHeight="47.0" prefWidth="145.0" style="-fx-border-color: #006400; -fx-border-radius: 10;" text="Корзина" textFill="DARKGREEN">
+               <font>
+                  <Font name="Segoe Print Bold" size="18.0" />
+               </font>
+            </Button>
+         </children></AnchorPane>
+        <Label layoutX="76.0" layoutY="29.0" prefHeight="32.0" prefWidth="111.0" text="Фрукты и овощи" textFill="PALEGREEN">
+            <font>
+                <Font name="Segoe Print" size="12.0" />
+            </font>
+        </Label>
+      <ImageView fitHeight="39.0" fitWidth="35.0" layoutX="14.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/onion.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="contactsButton" alignment="BOTTOM_CENTER" layoutX="253.0" layoutY="9.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="105.0" style="-fx-background-color: #006400; -fx-background-image: url('file:C:/YCHEBA/4сем/ООП/Project/src/sample/images/telephone.png');" text="Контакты" textFill="PALEGREEN" underline="true">
+         <font>
+            <Font name="Segoe Print Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="aboutCompanyButton" alignment="BOTTOM_CENTER" layoutX="358.0" layoutY="9.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="111.0" style="-fx-background-color: #006400; -fx-background-image: url('file:C:/YCHEBA/4сем/ООП/Project/src/sample/images/вопрос.png');" text="О компании" textFill="PALEGREEN" underline="true">
+         <font>
+            <Font name="Segoe Print Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="exitButton" alignment="BOTTOM_CENTER" layoutX="622.0" layoutY="9.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="69.0" style="-fx-background-color: #006400; -fx-background-image: url('file:C:/YCHEBA/4сем/ООП/Project/src/sample/images/door.png'); -fx-border-color: #006400;" text="Выход" textFill="PALEGREEN" underline="true">
+         <font>
+            <Font name="Segoe Print Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="cabinetButton" alignment="BOTTOM_CENTER" layoutX="476.0" layoutY="9.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="145.0" style="-fx-background-color: #006400; -fx-background-image: url('file:C:/YCHEBA/4сем/ООП/Project/src/sample/images/book.png');" text="Личный кабинет" textFill="PALEGREEN" underline="true">
+         <font>
+            <Font name="Segoe Print Bold" size="14.0" />
+         </font>
+      </Button>
+    </children>
+</AnchorPane>

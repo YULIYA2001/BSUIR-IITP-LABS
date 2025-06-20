@@ -1,0 +1,5 @@
+﻿{"availability":true,"name":"CUCUMBER","price":4.0,"referenceInformation":"происхождение Беларусь","sale":{"amount":0,"haveSale":false}}
+{"availability":true,"name":"PEAR","price":3.0,"referenceInformation":"происхождение Беларусь","sale":{"amount":0,"haveSale":false}}
+{"availability":true,"name":"TOMATO","price":3.4,"referenceInformation":"происхождение Беларусь","sale":{"amount":0,"haveSale":false}}
+{"availability":true,"name":"POTATO","price":0.75,"referenceInformation":"происхождение Беларусь","sale":{"amount":0,"haveSale":false}}
+{"availability":true,"name":"APPLE","price":2.5,"referenceInformation":"происхождение Беларусь","sale":{"amount":10,"haveSale":true}}

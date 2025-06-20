@@ -1,0 +1,1 @@
+{"amount":4.0,"cost":16.0,"product":{"availability":true,"name":"CUCUMBER","price":4.0,"referenceInformation":"происхождение Беларусь","sale":{"amount":0,"haveSale":false}}}

@@ -1,0 +1,2 @@
+{"amount":5.5,"cost":18.7,"product":{"availability":true,"name":"TOMATO","price":3.4,"referenceInformation":"происхождение Беларусь","sale":{"amount":0,"haveSale":false}}}
+{"amount":4.5,"cost":18.0,"product":{"availability":true,"name":"CUCUMBER","price":4.0,"referenceInformation":"происхождение Беларусь","sale":{"amount":0,"haveSale":false}}}

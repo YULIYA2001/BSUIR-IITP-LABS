@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: DARKGREEN;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.CartController">
+    <children>
+        <Label layoutX="59.0" layoutY="3.0" prefHeight="43.0" prefWidth="145.0" text="Чиполлино" textFill="PALEGREEN">
+            <font>
+                <Font name="Segoe Print Bold" size="24.0" />
+            </font>
+        </Label>
+        <AnchorPane layoutX="-6.0" layoutY="68.0" prefHeight="333.0" prefWidth="707.0" style="-fx-background-color: PALEGREEN;">
+            <children>
+                <Label layoutX="386.0" layoutY="282.0" text="Общая сумма:" textFill="DARKGREEN">
+                    <font>
+                        <Font name="Segoe Print Bold" size="16.0" />
+                    </font>
+                </Label>
+                <Button fx:id="deleteButtonA" layoutX="609.0" layoutY="49.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="79.0" style="-fx-background-color: #98fb98; -fx-border-color: #006400; -fx-border-radius: 5;" text="Удалить" textFill="DARKGREEN">
+                    <font>
+                        <Font name="Segoe Print Bold" size="13.0" />
+                    </font>
+                </Button>
+                <Label layoutX="234.0" layoutY="-2.0" text="Корзина" textFill="DARKGREEN">
+                    <font>
+                        <Font name="Segoe Print Bold" size="25.0" />
+                    </font>
+                </Label>
+                <Label fx:id="wholeCostLabel" layoutX="536.0" layoutY="282.0" text="-" textFill="DARKGREEN">
+                    <font>
+                        <Font name="Segoe Print Bold" size="16.0" />
+                    </font>
+                </Label>
+                <ImageView fitHeight="38.0" fitWidth="35.0" layoutX="38.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/apple.jpg" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="38.0" fitWidth="35.0" layoutX="40.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/pear.jpg" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="38.0" fitWidth="35.0" layoutX="38.0" layoutY="141.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/tomato.jpg" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="35.0" fitWidth="71.0" layoutX="9.0" layoutY="187.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/cucumber.jpg" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="35.0" fitWidth="52.0" layoutX="19.0" layoutY="232.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/potatoes.jpg" />
+                    </image>
+                </ImageView>
+                <Button fx:id="deleteButtonP" layoutX="609.0" layoutY="96.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="79.0" style="-fx-background-color: #98fb98; -fx-border-color: #006400; -fx-border-radius: 5;" text="Удалить" textFill="DARKGREEN">
+                    <font>
+                        <Font name="Segoe Print Bold" size="13.0" />
+                    </font>
+                </Button>
+                <Button fx:id="deleteButtonPot" layoutX="609.0" layoutY="231.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="79.0" style="-fx-background-color: #98fb98; -fx-border-color: #006400; -fx-border-radius: 5;" text="Удалить" textFill="DARKGREEN">
+                    <font>
+                        <Font name="Segoe Print Bold" size="13.0" />
+                    </font>
+                </Button>
+                <Button fx:id="deleteButtonC" layoutX="609.0" layoutY="186.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="79.0" style="-fx-background-color: #98fb98; -fx-border-color: #006400; -fx-border-radius: 5;" text="Удалить" textFill="DARKGREEN">
+                    <font>
+                        <Font name="Segoe Print Bold" size="13.0" />
+                    </font>
+                </Button>
+                <Button fx:id="deleteButtonT" layoutX="609.0" layoutY="141.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="79.0" style="-fx-background-color: #98fb98; -fx-border-color: #006400; -fx-border-radius: 5;" text="Удалить" textFill="DARKGREEN">
+                    <font>
+                        <Font name="Segoe Print Bold" size="13.0" />
+                    </font>
+                </Button>
+                <Label fx:id="appleLabel" layoutX="90.0" layoutY="54.0" prefHeight="25.0" prefWidth="270.0" text="Label" textFill="DARKGREEN">
+                    <font>
+                        <Font name="Segoe Print Bold" size="14.0" />
+                    </font>
+                </Label>
+                <Label fx:id="cucumberLabel" layoutX="90.0" layoutY="191.0" prefHeight="25.0" prefWidth="270.0" text="Label" textFill="DARKGREEN">
+                    <font>
+                        <Font name="Segoe Print Bold" size="14.0" />
+                    </font>
+                </Label>
+                <Label fx:id="pearLabel" layoutX="90.0" layoutY="101.0" prefHeight="25.0" prefWidth="270.0" text="Label" textFill="DARKGREEN">
+                    <font>
+                        <Font name="Segoe Print Bold" size="14.0" />
+                    </font>
+                </Label>
+                <Label fx:id="tomatoLabel" layoutX="90.0" layoutY="146.0" prefHeight="25.0" prefWidth="270.0" text="Label" textFill="DARKGREEN">
+                    <font>
+                        <Font name="Segoe Print Bold" size="14.0" />
+                    </font>
+                </Label>
+                <Label fx:id="potatoLabel" layoutX="90.0" layoutY="236.0" prefHeight="25.0" prefWidth="270.0" text="Label" textFill="DARKGREEN">
+                    <font>
+                        <Font name="Segoe Print Bold" size="14.0" />
+                    </font>
+                </Label>
+                <Label fx:id="sumALabel" layoutX="488.0" layoutY="52.0" prefHeight="29.0" prefWidth="111.0" text="0.00 р." textFill="DARKGREEN">
+                    <font>
+                        <Font name="Segoe Print Bold" size="16.0" />
+                    </font>
+                </Label>
+                <Label fx:id="sumPLabel" layoutX="489.0" layoutY="98.0" prefHeight="29.0" prefWidth="111.0" text="0.00 р." textFill="DARKGREEN">
+                    <font>
+                        <Font name="Segoe Print Bold" size="16.0" />
+                    </font>
+                </Label>
+                <Label fx:id="sumTLabel" layoutX="489.0" layoutY="143.0" prefHeight="29.0" prefWidth="111.0" text="0.00 р." textFill="DARKGREEN">
+                    <font>
+                        <Font name="Segoe Print Bold" size="16.0" />
+                    </font>
+                </Label>
+                <Label fx:id="sumCLabel" layoutX="488.0" layoutY="188.0" prefHeight="29.0" prefWidth="111.0" text="0.00 р." textFill="DARKGREEN">
+                    <font>
+                        <Font name="Segoe Print Bold" size="16.0" />
+                    </font>
+                </Label>
+                <Label fx:id="sumPotLabel" layoutX="486.0" layoutY="233.0" prefHeight="29.0" prefWidth="111.0" text="0.00 р." textFill="DARKGREEN">
+                    <font>
+                        <Font name="Segoe Print Bold" size="16.0" />
+                    </font>
+                </Label>
+                <Button fx:id="takeOrderButton" alignment="BOTTOM_CENTER" layoutX="164.0" layoutY="276.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="121.0" style="-fx-background-color: #98fb98; -fx-border-radius: 5; -fx-border-color: #006400;" text="Заказать" textFill="DARKGREEN">
+                    <font>
+                        <Font name="Segoe Print Bold" size="16.0" />
+                    </font>
+                </Button>
+                <Label layoutX="495.0" layoutY="21.0" text="Сумма:" textFill="DARKGREEN">
+                    <font>
+                        <Font name="Segoe Print Bold" size="16.0" />
+                    </font>
+                </Label>
+                <Label fx:id="weightALabel" layoutX="394.0" layoutY="52.0" prefHeight="29.0" prefWidth="79.0" text="0.0" textFill="DARKGREEN">
+                    <font>
+                        <Font name="Segoe Print Bold" size="16.0" />
+                    </font>
+                </Label>
+                <Label fx:id="weightPLabel" layoutX="394.0" layoutY="97.0" prefHeight="29.0" prefWidth="79.0" text="0.0" textFill="DARKGREEN">
+                    <font>
+                        <Font name="Segoe Print Bold" size="16.0" />
+                    </font>
+                </Label>
+                <Label fx:id="weightTLabel" layoutX="394.0" layoutY="142.0" prefHeight="29.0" prefWidth="79.0" text="0.0" textFill="DARKGREEN">
+                    <font>
+                        <Font name="Segoe Print Bold" size="16.0" />
+                    </font>
+                </Label>
+                <Label fx:id="weightCLabel" layoutX="394.0" layoutY="187.0" prefHeight="29.0" prefWidth="79.0" text="0.0" textFill="DARKGREEN">
+                    <font>
+                        <Font name="Segoe Print Bold" size="16.0" />
+                    </font>
+                </Label>
+                <Label fx:id="weightPotLabel" layoutX="394.0" layoutY="232.0" prefHeight="29.0" prefWidth="79.0" text="0.0" textFill="DARKGREEN">
+                    <font>
+                        <Font name="Segoe Print Bold" size="16.0" />
+                    </font>
+                </Label>
+                <Label layoutX="377.0" layoutY="21.0" text="Вес (кг):" textFill="DARKGREEN">
+                    <font>
+                        <Font name="Segoe Print Bold" size="16.0" />
+                    </font>
+                </Label>
+            </children></AnchorPane>
+        <Label layoutX="76.0" layoutY="29.0" prefHeight="32.0" prefWidth="111.0" text="Фрукты и овощи" textFill="PALEGREEN">
+            <font>
+                <Font name="Segoe Print" size="12.0" />
+            </font>
+        </Label>
+        <ImageView fitHeight="39.0" fitWidth="35.0" layoutX="14.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../images/onion.png" />
+            </image>
+        </ImageView>
+        <Button fx:id="backButton" alignment="BOTTOM_CENTER" layoutX="614.0" layoutY="11.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="71.0" style="-fx-background-color: #006400; -fx-background-image: url('file:C:/YCHEBA/4сем/ООП/Project/src/sample/images/стрелка.png'); -fx-border-color: #006400;" text="Назад" textFill="PALEGREEN" underline="true">
+            <font>
+                <Font name="Segoe Print Bold" size="14.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>
