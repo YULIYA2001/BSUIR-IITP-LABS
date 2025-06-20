@@ -1,0 +1,69 @@
+#pragma hdrstop
+
+#include "Queue.h"
+
+
+Queue :: ~Queue()
+{
+	while(Head)
+	{
+		Tail = Head->Next;
+		delete Head;
+		Head = Tail;
+    }
+}
+
+void Queue :: Show(TMemo *Memo1)
+{
+	Node *temp;
+	temp = Head;
+	while (temp != NULL)
+	{
+		Memo1->Lines->Add(temp->x);   //вывод в Memo1
+		temp = temp->Next;
+    }
+}
+
+void Queue :: Add(int x)
+{
+	Node *temp = new Node;
+	temp->Next = NULL;
+	temp->x = x;
+	if (Head != NULL)         //если список не пустой
+	{
+		temp->Prev = Tail;
+		Tail->Next = temp;
+		Tail = temp;
+	}
+	else                      //если список пустой
+	{
+		temp->Prev = NULL;    //новый элемент первый
+		Head = Tail = temp;   //(одновременно голова и хвост очереди)
+    }
+}
+
+void Queue :: Delete()
+{
+	if (Head == NULL)        //если список пустой
+	{
+		Application->Title = "Attention";
+		ShowMessage("Список пуст");
+	}
+	else                     //если список не пустой
+	{
+		Node *temp;
+		temp = Head->Next;
+		delete Head;         //удалить первый элемент
+		Head = temp;         //вернуть указатель на новый первый элемент
+    }
+}
+
+bool Queue :: IsEmpty(Node*)
+{
+	if (Head != NULL)
+		return false;
+	else
+		return true;
+}
+
+#pragma package(smart_init)

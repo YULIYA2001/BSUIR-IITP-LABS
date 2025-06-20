@@ -1,0 +1,122 @@
+#pragma hdrstop
+
+#include "Stack.h"
+
+/*Stack*/OPZ* OPZ:: InStack(/*Stack*/OPZ *top, char data)
+{
+	/*Stack*/ OPZ *item = new OPZ;//Stack;
+	item->data = data;
+	item->next = top;
+	return item;
+}
+
+OPZ* OutStack(OPZ *top, char *data)
+{
+	OPZ *item = top;
+	*data = top->data;
+	top = top->next;
+	delete item;
+	return top;
+}
+
+//Stack* OutStack(Stack *top, char *data)
+//{
+//	Stack *item = top;
+//	*data = top->data;
+//	top = top->next;
+//	delete item;
+//	return top;
+//}
+
+int OPZ :: Priority (char symbol)
+{
+	switch(symbol)
+	{
+		case '*':
+		case '/': return 3;
+		case '+':
+		case '-': return 2;
+		case '(': return 1;
+	}
+	return 0;
+}
+
+void OPZ :: IntoOPZ(TEdit *Edit1, TEdit *Edit2)
+{
+	top = NULL;
+	String inputStr, outputStr;  //строка с инфиксной и постфиксной формами
+	outputStr = "";
+	char inSymb, outSymb;   //символы строки с инфиксной и постфиксной формами
+	inputStr = Edit1->Text;
+	int length = inputStr.Length();
+	for (int i = 1; i <= length; i++)
+	{
+		inSymb = inputStr[i];
+		if (inSymb == '(')                //если символ входной строки (
+			top = InStack(top, inSymb);   //записать его в стек
+		if (inSymb == ')')                //если символ входной строки )
+		{
+			while (top->data != '(')      //пока в стеке не дошли до (
+			{
+				top = OutStack(top, &outSymb);  //доставать символы из стека
+				outputStr += outSymb;           //и записывать их в выходную строку
+			}
+			top = OutStack(top, &outSymb);      //достать из стека ( в никуда
+		}
+		if (inSymb >= 'a' && inSymb <= 'z')    //если символ входной строки буква
+			outputStr += inSymb;               //записать его в выходную строку
+		//если символ - знак операции
+		if (inSymb =='*' || inSymb =='/' || inSymb =='+' || inSymb =='-')
+		{
+			while (top != NULL && Priority(top->data) >= Priority(inSymb))
+			{
+				top = OutStack(top, &outSymb);  //достать последний символ стека
+				outputStr += outSymb;           //в выходную строку
+			}
+			top = InStack(top, inSymb);         //в стек записать текущий символ
+		}
+	}
+	while (top != NULL)			//когда символы закончились доставать
+	{                           // в выходную строку все, что осталось
+		top = OutStack(top, &outSymb);
+		outputStr += outSymb;
+	}
+	Edit2->Text = outputStr;
+}
+
+float OPZ :: Rezult(String outputStr, float *array)
+{
+	char variable, variable1, variable2;   //дл€ имен переменных
+	//дл€ значений переменных и результата действи€ над ними
+	double value1, value2, rez;
+	char valueRez = 'z' + 1;   //им€ "новой переменной" после совершени€ операции
+	for (int i = 1; i <= outputStr.Length(); i++)
+	{
+		variable = outputStr[i];
+		if (variable !='*' && variable !='/' && variable !='+' && variable !='-')
+			top = InStack(top, variable);     //записывать в стек только переменные
+		else
+		{                                     //если символ - знак
+			top = OutStack(top, &variable1);  //вз€ть 2 переменные из стека
+			top = OutStack(top, &variable2);
+			value1 = array[int(variable1)];   //найти их значени€ в массиве
+			value2 = array[int(variable2)];
+			switch(variable)
+			{
+				case '+': rez = value2 + value1; break;
+				case '-': rez = value2 - value1; break;
+				case '*': rez = value2 * value1; break;
+				case '/': rez = value2 / value1; break;
+			}
+			//запись результата действи€ в общий массив значений переменных
+			array[int(valueRez)] = rez;
+			//запись "новой переменной"(результат действи€ над старыми) в стек
+			top = InStack(top, valueRez);
+			//чтобы при записи в общий массив не перекрыть другие переменные
+			valueRez++;
+		}
+	}
+	return rez;
+}
+
+#pragma package(smart_init)

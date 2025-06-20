@@ -1,0 +1,12 @@
+﻿  List.c
+  main.c
+  project.c
+C:\УЧЁБА\Программирование\лаб 7\B-Project\B-Project\project.c(18,19): warning C4013: getch: нет определения; предполагается "extern" с возвратом типа "int"
+C:\УЧЁБА\Программирование\лаб 7\B-Project\B-Project\project.c(34,17): warning C4013: strlen: нет определения; предполагается "extern" с возвратом типа "int"
+  Resource.c
+C:\УЧЁБА\Программирование\лаб 7\B-Project\B-Project\Resource.c(36,23): warning C4013: getch: нет определения; предполагается "extern" с возвратом типа "int"
+C:\УЧЁБА\Программирование\лаб 7\B-Project\B-Project\Resource.c(77,14): warning C4101: c: неиспользованная локальная переменная
+C:\УЧЁБА\Программирование\лаб 7\B-Project\B-Project\Resource.c(116,17): warning C4013: strlen: нет определения; предполагается "extern" с возвратом типа "int"
+  Task.c
+  Создание кода...
+  B-Project.vcxproj -> C:\УЧЁБА\Программирование\лаб 7\B-Project\Debug\B-Project.exe

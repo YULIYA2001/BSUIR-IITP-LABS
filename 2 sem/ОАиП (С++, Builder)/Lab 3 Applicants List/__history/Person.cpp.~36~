@@ -1,0 +1,191 @@
+#pragma hdrstop
+
+#include "Person.h"
+
+List :: List()
+{
+	size = 0;
+	head = NULL;
+}
+
+void List :: Add(String surname, String name, String patronymic, AnsiString address,
+			 int math, int language, int physics)
+{
+	if (head == NULL)
+	{
+		head = new Person(surname,name,patronymic,address,math,language,physics);
+	}
+	else
+	{
+		Person *current = head;
+		while (current->next != NULL)
+		{
+			current = current->next;
+		}
+		current->next = new Person(surname, name, patronymic, address, math,
+			language, physics);
+	}
+	size++;
+}
+
+void List :: Print(TMemo *Memo1)
+{
+	Person *person = head;
+	if (person == NULL);
+	else
+	{
+		while (person != NULL)
+		{
+			PrintToMemo(person, Memo1);
+			person = person->next;
+        }
+	}
+}
+
+void List :: PrintToMemo(Person *person, TMemo *Memo1)
+{
+	Memo1->Lines->Add("Фамилия     : " + person->surname);
+	Memo1->Lines->Add("Имя             : " + person->name);
+	Memo1->Lines->Add("Отчество     : " + person->patronymic);
+	Memo1->Lines->Add("Адрес          : " + person->address);
+	Memo1->Lines->Add("----Оценки----");
+	Memo1->Lines->Add("Математика : " + IntToStr(person->math));
+	Memo1->Lines->Add("Язык(б/р)    : " + IntToStr(person->language));
+	Memo1->Lines->Add("Физика        : " + IntToStr(person->physics));
+	Memo1->Lines->Add("Ср. балл       : " +
+		FloatToStr(floor(person->average*100)/100));
+	Memo1->Lines->Add("\n");
+}
+
+void List :: SearchBySurname(TMemo *Memo1, String neededSurname)
+{
+	Person *person = head;
+	while (person != NULL)
+	{
+		if(person->surname == neededSurname)
+			PrintToMemo(person, Memo1);
+		person = person->next;
+	}
+}
+ ////////////////////////////////////
+void List :: SearchByCity(TMemo *Memo1, AnsiString city)
+{
+	Person *person = head;
+	AnsiString addressCity;
+	int check, i;
+    while (person != NULL)
+	{
+		i = 1;
+        check = 0;
+		while (i <= person->address.Length() || person->address[i] != ','
+			|| person->address[i] != ' ')
+		{
+			addressCity[i] = person->address[i];
+			i++;
+		}
+		int cityLen = city.Length();
+		if (cityLen == addressCity.Length())
+		{
+			for (int i = 1; i <= cityLen; i++)
+			{
+				if (addressCity[i] == city[i])
+					check++;
+			}
+			if(check == cityLen)
+				PrintToMemo(person, Memo1);
+		}
+        person = person->next;
+	}
+}
+/////////////////////////////////////
+void List :: SearchByMark(TMemo *Memo1, int mark, int subject)
+{
+	Person *person = head;
+	switch(subject)
+	{
+		case 1:
+		{
+			while (person != NULL)
+			{
+				if(person->math == mark)
+					PrintToMemo(person, Memo1);
+				person = person->next;
+			}
+			break;
+		}
+		case 2:
+		{
+			while (person != NULL)
+			{
+				if(person->language == mark)
+					PrintToMemo(person, Memo1);
+				person = person->next;
+			}
+			break;
+		}
+		case 3:
+		{
+			while (person != NULL)
+			{
+				if(person->physics == mark)
+					PrintToMemo(person, Memo1);
+				person = person->next;
+			}
+			break;
+		}
+	}
+}
+
+String List :: DeletePerson()
+{
+	Person *person = head, *current = person->next;
+	int min = person->average;
+	String removed;
+	//поиск абитуриента с худшим баллом
+	while (person != NULL)
+	{
+		if (person->average < min)
+			min = person->average;
+		person = person->next;
+	}
+	person = head;
+	//удаление абитуриента с худшим баллом
+	if (min != head->average)  //если элемент для удаления не первый
+	{
+		while (current != NULL && current->average != min)
+		{
+			person = current;
+			current = current->next;
+		}
+		if (current != NULL)
+		{
+			person->next = current->next;
+			removed = current->surname;
+			delete current;
+			size--;
+		}
+	}
+	else   //если элемент для удаления первый
+	{
+		head = head->next;
+		removed = person->surname;
+		delete person;
+		size--;
+	}
+	return removed;
+}
+
+void List :: Delete()
+{
+	Person *temp;
+	while (head != NULL)
+	{
+		temp = head;
+		head = head-> next;
+		delete temp;
+		size--;
+	}
+}
+
+
+#pragma package(smart_init)

@@ -1,0 +1,52 @@
+#pragma hdrstop
+
+#include "Variant6.h"
+
+MyList :: ~MyList()
+{
+	while(Head)
+	{
+		Tail = Head->Next;
+		delete Head;
+		Head = Tail;
+	}
+}
+
+void MyList :: RemoveMinus()
+{
+
+	Node *prevTemp, *curTemp;
+	prevTemp = Head;
+	curTemp = prevTemp->Next;
+	while (curTemp->Next != NULL)
+	{
+		if (curTemp->x < 0)
+		{
+			(curTemp->Next)->Prev = curTemp->Prev;
+			(curTemp->Prev)->Next = curTemp->Next;
+			delete curTemp;
+			curTemp = prevTemp->Next;
+		}
+		else
+		{
+			curTemp = curTemp->Next;
+			prevTemp = prevTemp->Next;
+		}
+	}
+	if (Head->x < 0)
+	{
+		curTemp = Head->Next;
+		delete Head;
+		Head = curTemp;
+		Head->Prev = NULL;
+	}
+	if (Tail->x < 0)
+	{
+		curTemp = Tail->Prev;
+		(Tail->Prev)->Next = NULL;
+		delete Tail;
+		Tail = curTemp;
+	}
+}
+
+#pragma package(smart_init)

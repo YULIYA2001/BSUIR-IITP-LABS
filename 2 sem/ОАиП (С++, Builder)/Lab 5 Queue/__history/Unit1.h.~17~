@@ -1,0 +1,53 @@
+//---------------------------------------------------------------------------
+
+#ifndef Unit1H
+#define Unit1H
+//---------------------------------------------------------------------------
+#include <System.Classes.hpp>
+#include <Vcl.Controls.hpp>
+#include <Vcl.StdCtrls.hpp>
+#include <Vcl.Forms.hpp>
+#include <Vcl.ComCtrls.hpp>
+#include <Vcl.ExtCtrls.hpp>
+//---------------------------------------------------------------------------
+class TForm1 : public TForm
+{
+__published:	// IDE-managed Components
+	TEdit *SizeEdit;
+	TEdit *Edit2;
+	TLabel *Label1;
+	TButton *CreateButton;
+	TButton *PrintButton;
+	TButton *AddToEndButton;
+	TButton *TakeFromBeginButton;
+	TButton *IsEmptyButton;
+	TButton *CleanButton;
+	TLabel *Label2;
+	TLabel *Label3;
+	TListBox *ListBox1;
+	TLabel *Label4;
+	TMemo *Memo1;
+	TLabel *Label5;
+	TPanel *Panel1;
+	TLabel *Label6;
+	TLabel *Label7;
+	TEdit *Edit3;
+	TButton *Button7;
+	TListBox *ListBox2;
+	void __fastcall CreateButtonClick(TObject *Sender);
+	void __fastcall PrintButtonClick(TObject *Sender);
+	void __fastcall AddToEndButtonClick(TObject *Sender);
+	void __fastcall TakeFromBeginButtonClick(TObject *Sender);
+	void __fastcall IsEmptyButtonClick(TObject *Sender);
+	void __fastcall CleanButtonClick(TObject *Sender);
+	void __fastcall SizeEditKeyPress(TObject *Sender, System::WideChar &Key);
+	void __fastcall Button7Click(TObject *Sender);
+	void __fastcall Memo1KeyPress(TObject *Sender, System::WideChar &Key);
+private:	// User declarations
+public:		// User declarations
+	__fastcall TForm1(TComponent* Owner);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE TForm1 *Form1;
+//---------------------------------------------------------------------------
+#endif

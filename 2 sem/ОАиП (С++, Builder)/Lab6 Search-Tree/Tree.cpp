@@ -1,0 +1,270 @@
+#pragma hdrstop
+
+#include "Tree.h"
+TTree* Tree :: MakeList(TInf inf){	TTree *t = new TTree;
+	t->inf = inf;
+	t->left = NULL;
+	t->right = NULL;
+	return t;
+}
+
+void Tree :: AddArrayToTree(TTree **root, TStringGrid *StringGrid1)
+{
+	TInf inf;
+	if ((*root) == NULL)
+	{
+		inf.fio = StringGrid1->Cells[0][1];
+		inf.key = StrToInt(StringGrid1->Cells[1][1]);
+		(*root) = MakeList(inf);
+		for(int i = 2; i <= 10; i++)
+		{
+			inf.fio = StringGrid1->Cells[0][i];
+			inf.key = StrToInt(StringGrid1->Cells[1][i]);
+			TTree *prev, *t = (*root);
+			while (t != NULL)
+			{
+				prev = t;
+				if (inf.key < t->inf.key)
+					t = t->left;
+				else
+					t = t->right;
+			}
+			t = MakeList(inf);
+			if (inf.key < prev->inf.key)
+				prev->left = t;
+			else
+				prev->right = t;
+		}
+	}
+	else
+	{
+		for(int i = 1; i <= 10; i++)
+		{
+			inf.fio = StringGrid1->Cells[0][i];
+			inf.key = StrToInt(StringGrid1->Cells[1][i]);
+            AddList(&(*root), inf);
+		}
+    }
+}
+
+void Tree :: AddList(TTree **root, TInf inf){
+	if ((*root) == NULL)
+	{
+		(*root) = MakeList(inf);
+		return;
+	}
+	TTree *prev, *t;	//prev – указатель предка нового листа, t - текущий лист
+	bool find = true;   //проверка уникальности ключа
+	t = (*root);
+	while (t != NULL && find != NULL)
+	{
+		prev = t;
+		if(inf.key == (t->inf).key)
+		{
+			find = false;   //ключ не уникален
+			Application->Title = "ОШИБКА";
+			ShowMessage("Повторяющийся ключ!");
+		}
+		else if (inf.key < (t->inf).key)
+			t = t->left;
+		else
+			t = t->right;
+	}
+	if (find)   //нашли нужное место
+	{
+		t = MakeList(inf); // Создаем новый лист
+		if (inf.key < (prev->inf).key)
+			prev -> left = t;
+		else
+			prev -> right = t;
+	}
+}
+TTree* Tree :: DelInfo(TTree *root, int key)
+{
+	// Del, Prev_Del – удаляемый узел и его предыдущий
+	// R, Prev_R – элемент, на который заменяется удаляемый узел, и его предок
+	TTree *Del, *Prev_Del, *R, *Prev_R;
+	Del = root;
+	Prev_Del = NULL;
+	// Поиск удаляемого элемента и его предка по ключу key
+	while (Del != NULL && (Del->inf).key != key)
+	{
+		Prev_Del = Del;
+		if ((Del->inf).key > key)
+			Del = Del->left;
+		else
+			Del = Del->right;
+	}
+	// Элемент не найден
+	if (Del == NULL)
+	{
+		Application->Title = "ОШИБКА";
+		ShowMessage ( "Такой ключ не найден!");
+		return root;
+	}
+	//Поиск элемента R для замены
+	if (Del->right == NULL)
+		R = Del->left;
+	else if (Del->left == NULL)
+		 R = Del->right;
+	else
+	{
+		//Ищем самый правый узел в левом поддереве
+		Prev_R = Del;
+		R = Del->left;
+		while (R->right != NULL)
+		{
+			Prev_R = R;
+			R = R->right;
+		}
+		// Формируем связи элемента R и его предка Prev_R
+		if( Prev_R == Del)
+			R->right = Del->right;
+		else
+		{
+			R->right = Del->right;
+			Prev_R->right = R->left;
+			R->left = Prev_R;
+		}
+	}
+	// Удаляя корень, заменяем его на R
+	if (Del == root)
+		root = R;
+	else if ((Del->inf).key < (Prev_Del->inf).key)
+	// Поддерево R присоединяем к предку удаляемого узла
+		Prev_Del->left = R;		// На левую ветвь
+	else Prev_Del->right = R;   // На правую ветвь
+	delete Del;
+	return root;
+}
+
+void Tree :: DeleteTree(TTree **t)
+{
+	if ((*t) == NULL)
+		return;
+	DeleteTree(&(*t)->left);
+	DeleteTree(&(*t)->right);
+	delete(*t);
+	*t = NULL;
+}
+
+void Tree :: PrPrintTree(TTree**t, TMemo *Memo1)
+{
+	if (*t == NULL)
+		return;
+	Memo1->Lines->Add(IntToStr((*t)->inf.key) + " --- " + (*t)->inf.fio);
+	PrPrintTree((&(*t)->left), Memo1);
+	PrPrintTree((&(*t)->right), Memo1);
+}
+
+void Tree :: ObPrintTree(TTree**t, TMemo *Memo1)
+{
+	if (*t == NULL)
+		return;
+	ObPrintTree((&(*t)->left), Memo1);
+	ObPrintTree((&(*t)->right), Memo1);
+	Memo1->Lines->Add(IntToStr((*t)->inf.key) + " --- " + (*t)->inf.fio);
+}
+
+void Tree :: SimPrintTree(TTree**t, TMemo *Memo1)
+{
+	if (*t == NULL)
+		return;
+	SimPrintTree((&(*t)->left), Memo1);
+	Memo1->Lines->Add(IntToStr((*t)->inf.key) + " --- " + (*t)->inf.fio);
+	SimPrintTree((&(*t)->right), Memo1);
+}
+
+void Tree :: ViewTree(TTree *t, int kl, TTreeView *TreeView1)
+{
+	if (t == NULL)
+		return;
+	if (kl == -1)
+		TreeView1->Items->AddFirst(NULL,t->inf.fio + " = " +
+		IntToStr(t->inf.key));
+	else
+		TreeView1->Items->AddChildFirst(TreeView1->Items->
+		Item[kl], t->inf.fio + " = " + IntToStr(t->inf.key));
+	kl++;
+	ViewTree(t->left,kl,TreeView1);
+	ViewTree(t->right,kl,TreeView1);
+	kl--;
+}
+
+void Tree :: SearchInfo(TTree *root, int key, TMemo *Memo1)
+{
+	TTree *t;
+	t = root;
+	// Поиск элемента по ключу key
+	while (t != NULL && (t->inf).key != key)
+	{
+		if ((t->inf).key > key)
+			t = t->left;
+		else
+			t = t->right;
+	}
+	// Элемент не найден
+	if (t == NULL)
+	{
+		Application->Title = "ОШИБКА";
+		ShowMessage ( "Такой ключ не найден!");
+	}
+	else
+		Memo1->Lines->Add(IntToStr(t->inf.key) + " --- " + t->inf.fio);
+}
+
+void Tree :: ReturnBallanced(TTree **root, int size, TInf *array)
+{
+    int m = 0;
+	TreeToArray(&(*root), array, m);
+	MakeBallance(&(*root), 0, size, array);
+}
+
+void Tree :: TreeToArray(TTree**t, TInf *array, int& m)
+{
+	if ((*t) == NULL)
+        return;
+	TreeToArray(&((*t)->left), array, m);
+	array[m].key = (*t)->inf.key;
+	array[m].fio = (*t)->inf.fio;
+	m++;
+	TreeToArray(&((*t)->right), array, m);
+}
+
+void Tree :: MakeBallance(TTree **t, int n, int k, TInf *array)
+{
+	if (n == k)
+	{
+		(*t) = NULL;
+		return;
+	}
+	else
+	{
+		int m = (n + k) / 2;
+		(*t) = new TTree;
+		(*t)->inf.key = array[m].key;
+		(*t)->inf.fio = array[m].fio;
+		MakeBallance( &(*t)->left, n, m, array);
+		MakeBallance( &(*t)->right, m + 1, k, array);
+	}
+}
+
+int Tree:: ListCount(TTree *t)
+{
+	if(t == NULL)
+		return 0;
+	if (t->left == NULL && t->right == NULL)
+        return 1;
+    int left, right;
+	if (t->left != NULL)
+		left = ListCount(t->left);
+    else
+        left = 0;
+	if (t->right != NULL)
+		right = ListCount(t->right);
+    else
+		right = 0;
+	return left + right + 1;
+}
+
+#pragma package(smart_init)

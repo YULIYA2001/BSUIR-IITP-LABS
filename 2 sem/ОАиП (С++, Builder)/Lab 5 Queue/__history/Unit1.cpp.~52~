@@ -1,0 +1,168 @@
+#include <vcl.h>
+#pragma hdrstop
+
+#include "Unit1.h"
+#include "Queue.h"
+#include "Variant6.h"
+#include <stdlib.h>
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TForm1 *Form1;
+Queue queue;
+//---------------------------------------------------------------------------
+__fastcall TForm1::TForm1(TComponent* Owner)
+	: TForm(Owner)
+{
+}
+
+//кнопка "Создать" для очереди
+void __fastcall TForm1::Button1Click(TObject *Sender)
+{
+	//удаление прошлой очереди
+	queue.~Queue();
+	ListBox1->Clear();
+	//если не введен размер
+	if (Edit1->Text == "" || Edit1->Text == "0")
+	{
+		Application->Title = "Подсказка";
+		ShowMessage("1. Введите \"Размер очереди\""
+			"\n2. Запишите элементы в поле \"Очередь\""
+			"\n3. Нажмите кнопку \"Создать\"");
+	}   
+	//если размер не соответствует кол-ву введенных элементов
+	else if (Memo1->Lines->Count != StrToInt(Edit1->Text))
+	{
+		Application->Title = "Подсказка";
+		ShowMessage("1. Запишите элементы в поле \"Очередь\""
+			"\n2. Проверте количество введенных элементов"
+			"\n3. Нажмите кнопку \"Создать\"");	
+	}
+	else
+	{
+		int length = Memo1->Lines->Count;
+		for (int i = 0; i < length; i++)
+		{                                              
+			int x = StrToInt(Memo1->Lines->Strings[i]);
+			queue.Add(x);
+		} 
+		Memo1->Clear();
+		ListBox1->Clear();
+		//Button2Click(Sender);
+	}
+}
+
+//кнопка "Печать"
+void __fastcall TForm1::Button2Click(TObject *Sender)
+{
+	ListBox1->Clear();
+	queue.Show(ListBox1);
+	if (ListBox1->Items->Count == 0)
+		ListBox1->Items->Add("Очередь пуста");
+}
+
+//кнопка "Добавить в конец"
+void __fastcall TForm1::Button3Click(TObject *Sender)
+{
+	ListBox1->Clear();
+	if (Edit2->Text != "")
+	{
+		ListBox1->Clear();
+		int x = StrToInt(Edit2->Text);
+		queue.Add(x);
+		Edit1->Text = IntToStr(StrToInt(Edit1->Text) + 1);
+		Edit2->Text = "";
+		Button2Click(Sender);			
+	}
+	else 
+	{
+		Application->Title = "Подсказка";
+		ShowMessage("Введите элемент для добавления");
+	}
+}
+
+//кнопка "Извлечь из начала"
+void __fastcall TForm1::Button4Click(TObject *Sender)
+{
+	ListBox1->Clear();
+	queue.Delete(Edit1);
+	Button2Click(Sender);
+}
+
+//кнопка "Проверить пустоту"
+void __fastcall TForm1::Button5Click(TObject *Sender)
+{
+   ListBox1->Clear();
+   queue.IsEmpty(Edit1);
+}
+
+//кнопка "Очистить"
+void __fastcall TForm1::Button6Click(TObject *Sender)
+{
+	queue.~Queue();
+	ListBox1->Clear();
+	Edit1->Text = "0";
+	Application->Title = "Очистка";
+	ShowMessage("Очередь пуста");	
+}
+
+//переход в Memo1 при нажатии Enter после ввода размера очереди
+void __fastcall TForm1::Edit1KeyPress(TObject *Sender, System::WideChar &Key)
+{
+	//если введен enter
+	if(Key == VK_RETURN)
+	{
+		Key = 0;
+		Memo1->SetFocus();
+	}	
+}
+
+MyList myList;
+
+//кнопка "Решение" для списка
+void __fastcall TForm1::Button7Click(TObject *Sender)
+{
+	//удаление прошлого списка
+	myList.~MyList();
+	ListBox2->Clear();
+	//если не введен размер
+	if (Edit3->Text == "" || Edit3->Text == "0")
+	{
+		Application->Title = "Подсказка";
+		ShowMessage("Введите \"Размер списка\"");
+	}
+	else
+	{
+		Application->Title = "Условие";
+		ShowMessage("\tСоздать двухсвязный список из случайных целых чисел."
+			" Удалить все отрицательные элементы списка");
+		//случайное заполнение
+		int amount = StrToInt(Edit3->Text);
+		randomize();
+		for (int i = 0; i < amount; i++)
+		{
+			myList.Add(rand() % 101 - 50); //заполнение числами от -50 до 50
+		}
+		ListBox2->Items->Add("Исходный:");
+		myList.Show(ListBox2);
+		myList.RemoveMinus();
+		ListBox2->Items->Add("Без отрицат.");
+		ListBox2->Items->Add("элементов:");
+		myList.Show(ListBox2);
+	}
+}
+
+//проверка на ввод целых в Memo1
+void __fastcall TForm1::Memo1KeyPress(TObject *Sender, System::WideChar &Key)
+{
+	if ((Key >= '0' && Key <= '9') || Key == '-' || Key == ' ' || Key == VK_BACK
+		|| Key == VK_RETURN);
+	else 
+	{
+		Key = '0';                                                 
+		Application->Title = "Ошибка";                
+		ShowMessage("Ввод только целых");
+	}                                      	
+}
+
+

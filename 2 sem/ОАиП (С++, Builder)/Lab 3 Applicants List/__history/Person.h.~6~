@@ -1,0 +1,45 @@
+#ifndef PersonH
+#define PersonH
+
+class List
+{
+	public:
+	List();
+	~List(){};
+	void Add(String surname, String name, String patronymic, String address,
+			 int math, int language, int physics);  //добавление элемента в список
+	int GetSize(){return size;}     //получение размера списка
+	void Print(TMemo *);
+
+	private:
+    class Person
+	{
+		public:
+		Person *next;
+		String surname;
+		String name;
+		String patronymic;
+		String address;
+		int math;
+		int language;
+		int physics;
+		double average;
+		Person(String surname, String name, String patronymic, String address,
+			 int math, int language, int physics)
+		{
+			this->surname = surname;
+			this->name = name;
+			this->patronymic = patronymic;
+			this->address = address;
+			this->math = math;
+			this->language = language;
+			this->physics = physics;
+			this->average = ((double)(math + language + physics)) / 3;
+		}
+	};
+
+	Person *head;
+	int size;
+};
+
+#endif

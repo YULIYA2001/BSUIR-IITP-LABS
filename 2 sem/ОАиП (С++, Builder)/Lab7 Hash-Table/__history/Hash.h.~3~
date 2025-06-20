@@ -1,0 +1,113 @@
+#ifndef HashH
+#define HashH
+
+typedef int TKey;
+
+struct TInf
+{
+	String Inf;
+	TKey key;
+};
+struct Node
+{
+	TInf Inf;
+	Node *next;
+};
+
+class THash
+{
+	public:
+	THesh(int, *char);
+	void Add(TInf);
+	void Delete(Tkey);
+	bool Read(TKey, TInf*);
+	~THesh();
+	private:
+	int AmountOfRecords;
+	Node **H;                //указатель на массив указателей
+	int i;
+};
+
+#endif
+
+THash :: THash(int amount)
+{
+	AmountOfRecords = amount;
+	H = new Node*[AmountOfRecords];    //массив из AmmountOfRecords указателей
+	for(int i = 0; i < AmountOfRecords; i++)
+		H[i] = NULL;
+}
+
+THash :: Add(TInf Inf)
+{
+	Node *p = new Node;
+	i = Inf.key%AmountOfRecords; //хеш функция
+	p->next = H[i];
+	p->Inf = Inf;
+	H[i] = p;
+}
+
+THash :: Delete(TKey key)
+{
+	i = key % AmountOfRecords;
+	Node *p = H[i], *p1;
+	if(p == NULL)
+		return;
+	if(p->Inf.key == key)
+	{
+		H[i] = p->next;
+		delete p;
+	}
+	else
+	{
+		p1 = p->next;
+		while (p1 != NULL)
+		{
+			if(p1->Inf.key = key)
+			{
+				p->A = p1->next;
+				delete p1;
+				return;
+			}
+			p = p1;
+			p1 = p1->next;
+        }
+    }
+}
+
+bool THash :: Read(TKey key, TInf *Inf)
+{
+	i = key % AmountOfRecords;
+	Node *p = H[i], *p1;
+	bool bl = false;
+	if(p != NULL)
+	{
+		do
+		{
+			bl = (p->Inf.key == key);
+			p1 = p;
+			p = p->next;
+		} while((!bl) && (p != NULL));
+		if(bl)
+			*Inf = p1->Inf;
+	}
+	return bl;
+}
+
+THash :: ~THash()
+{
+	Node *p;
+	for(int i = 0; i < AmountofRecords; i++)
+	{
+		while(H[i] != NULL)
+		{
+			p = H[i];
+			H[i] = H[i]->next;
+			delete p;
+		}
+	}
+	delete H;
+}
+
+
+

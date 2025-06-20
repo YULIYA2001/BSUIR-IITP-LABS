@@ -1,0 +1,23 @@
+#ifndef QueueH
+#define QueueH
+
+struct Node
+{
+	int x;
+    Node *Next, *Prev;
+};
+
+class Queue
+{
+	Node *Head, *Tail;
+	public:
+	Queue() : Head(NULL), Tail(NULL){}  //конструктор
+	~Queue();                           //деструктор (очистка очереди)
+	void Show(TListBox*);				//просмотр
+	void Add(int);						//добавление элемента в конец
+	void Delete(TEdit*);				//удаление элемента из начала
+	void IsEmpty(TEdit*);				//проверка на пустоту
+};
+
+
+#endif

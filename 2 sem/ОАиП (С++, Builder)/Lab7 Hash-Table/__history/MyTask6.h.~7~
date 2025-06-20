@@ -1,0 +1,13 @@
+#ifndef MyTask6H
+#define MyTask6H
+
+#include "Hash.h"
+
+class MyTask : public Hash
+{
+	public:
+	double AverageValue(int, Node**);    // среднее значение всех ключей
+	int Amount();             // кол-во ключей, превышающих среднее значение
+};
+
+#endif

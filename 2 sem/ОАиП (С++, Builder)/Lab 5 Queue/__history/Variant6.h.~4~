@@ -1,0 +1,15 @@
+#include "Queue.h"
+
+#ifndef Variant6H
+#define Variant6H
+
+class MyList : public Queue
+{
+	//Node *Head, *Tail;
+	public:
+	MyList() : Head(NULL), Tail(NULL){}  //конструктор
+	~MyList();                           //деструктор (очистка списка)
+	void RemoveMinus();                  //удаление отрицательных элементов
+};
+
+#endif

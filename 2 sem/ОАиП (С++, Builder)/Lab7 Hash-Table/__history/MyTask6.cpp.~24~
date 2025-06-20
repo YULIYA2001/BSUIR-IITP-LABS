@@ -1,0 +1,44 @@
+#pragma hdrstop
+
+#include "MyTask6.h"
+
+double MyTask :: AverageValue(int hashTableSize, Node **hashTable, TMemo*Memo)
+{
+	Node *p;
+	int sum = 0;
+	int count = 0;
+	for (int i = 0; i < hashTableSize; i++)
+	{
+		 p = hashTable[0];
+		 while(p != NULL)
+		 {
+			sum += p->data;
+			Memo->Lines->Add("data  " + IntToStr(p->data));
+			count++;
+            Memo->Lines->Add("count  " + IntToStr(count));
+			p = p->next;
+		 }
+	}
+    Memo->Lines->Add("sum  " + IntToStr(sum));
+	return (double)sum / (double)count;
+}
+
+int MyTask :: Amount(int hashTableSize, Node **hashTable)
+{
+//	double average = AverageValue(hashTableSize, hashTable);
+//	int count = 0;
+//	Node *p;
+//	for (int i = 0; i < hashTableSize; i++)
+//	{
+//		 p = hashTable[i];
+//		 while(p != NULL)
+//		 {
+//			if((double)p->data > average)
+//				count++;
+//			p = p->next;
+//		 }
+//	}
+//	return count;
+}
+
+#pragma package(smart_init)

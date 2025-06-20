@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899 12 30 00:00:00.000.684,C:\УЧЁБА\ОАиП\2 сем\embarcad\Unit1.dfm=C:\УЧЁБА\ОАиП\2 сем\Lab 4\Unit1.dfm</Transaction>
+    <Transaction>1899 12 30 00:00:00.000.092,C:\УЧЁБА\ОАиП\2 сем\Lab 4\Unit2.h=C:\УЧЁБА\ОАиП\2 сем\Lab 4\Stack.h</Transaction>
+    <Transaction>1899 12 30 00:00:00.000.092,C:\УЧЁБА\ОАиП\2 сем\Lab 4\Unit2.cpp=C:\УЧЁБА\ОАиП\2 сем\Lab 4\Stack.cpp</Transaction>
+    <Transaction>1899 12 30 00:00:00.000.684,C:\УЧЁБА\ОАиП\2 сем\embarcad\Unit1.cpp=C:\УЧЁБА\ОАиП\2 сем\Lab 4\Unit1.cpp</Transaction>
+    <Transaction>1899 12 30 00:00:00.000.310,=C:\УЧЁБА\ОАиП\2 сем\embarcad\Unit1.cpp</Transaction>
+    <Transaction>1899 12 30 00:00:00.000.713,=C:\УЧЁБА\ОАиП\2 сем\embarcad\Unit1.cpp</Transaction>
+    <Transaction>1899 12 30 00:00:00.000.440,=C:\УЧЁБА\ОАиП\2 сем\embarcad\Project1PCH1.h</Transaction>
+    <Transaction>1899 12 30 00:00:00.000.136,=C:\УЧЁБА\ОАиП\2 сем\embarcad\Project1PCH1.h</Transaction>
+    <Transaction>1899 12 30 00:00:00.000.502,C:\УЧЁБА\ОАиП\2 сем\embarcad\Project1PCH1.h=C:\УЧЁБА\ОАиП\2 сем\Lab 4\Project1PCH1.h</Transaction>
+    <Transaction>1899 12 30 00:00:00.000.106,=C:\УЧЁБА\ОАиП\2 сем\Lab 4\Unit2.cpp</Transaction>
+    <Transaction>1899 12 30 00:00:00.000.684,C:\УЧЁБА\ОАиП\2 сем\embarcad\Unit1.h=C:\УЧЁБА\ОАиП\2 сем\Lab 4\Unit1.h</Transaction>
+    <Transaction>1899 12 30 00:00:00.000.530,C:\УЧЁБА\ОАиП\2 сем\embarcad\Project1.cbproj=C:\УЧЁБА\ОАиП\2 сем\Lab 4\Project1.cbproj</Transaction>
+  </Transactions>
+</BorlandProject>

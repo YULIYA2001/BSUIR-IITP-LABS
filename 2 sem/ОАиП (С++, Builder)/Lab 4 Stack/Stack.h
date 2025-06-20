@@ -1,0 +1,28 @@
+#ifndef StackH
+#define StackH
+
+struct Stack
+{
+	char data;
+	Stack *next;
+};
+
+Stack *top;
+Stack *InStack(Stack *, char);       //запись в стек
+Stack *OutStack(Stack *, char *);    //извлечение из стека (с удалением)
+
+class OPZ
+{
+	public:
+	int Priority (char);               //приоритет операций при подсчете
+	float Rezult(String, float*);             //подсчет значения выражения
+	void IntoOPZ(TEdit*, TEdit*);      //преобразование в постфиксную форму
+};
+
+#endif
+
+
+
+
+
+

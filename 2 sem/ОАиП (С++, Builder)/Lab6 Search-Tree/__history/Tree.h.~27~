@@ -1,0 +1,41 @@
+#include <Vcl.Grids.hpp>
+
+#ifndef TreeH
+#define TreeH
+
+struct TInf
+{
+	int key;
+	String fio;
+};
+
+struct TTree
+{
+	TInf inf;
+	TTree *left, *right;
+};
+
+class Tree
+{
+	TTree* MakeList(TInf);                   //формирование листа
+	public:
+	//внести информацию из массива в дерево
+	void AddArrayToTree(TTree**, TStringGrid*);
+	void AddList(TTree**, TInf);              //добавить в дерево новую запись
+	//удалить информацию (лист) с заданным ключом
+	TTree* DelInfo(TTree *root, int key);
+	void DeleteTree(TTree**);                //удаление всего дерева
+	void PrPrintTree(TTree**, TMemo*);	     //печать прямым обходом
+	void ObPrintTree(TTree**, TMemo*);	     //печать обратным обходом
+	void SimPrintTree(TTree**, TMemo*);	     //печать в порядке возрастания ключа
+	void ViewTree(TTree*, int, TTreeView*);  //печать в TreeView
+    //найти информацию по ключу и отобразить ее
+	void SearchInfo(TTree*, int, TMemo*);
+	//сбалансировать дерево
+	void MakeBallance(TTree**, int n, int k, TInf *a);
+	void TreeToArray(TTree**t, TInf *a);     //запись дерева в массив
+    int ListCount(TTree *t);
+};
+
+#endif
+

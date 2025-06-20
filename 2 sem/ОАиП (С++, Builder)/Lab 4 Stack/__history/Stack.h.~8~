@@ -1,0 +1,27 @@
+#ifndef StackH
+#define StackH
+
+struct Stack
+{
+	char data;
+	Stack *next;
+};
+
+Stack *top = NULL;                   //стек пустой
+Stack *InStack(Stack *, char);       //запись в стек
+Stack *OutStack(Stack *, char *);    //извлечение из стека (с удалением)
+
+class OPZ
+{
+	public:
+	int Priority (char);               //приоритет операций при подсчете
+	double Rezult(String);             //подсчет значения выражения
+	void IntoOPZ(TEdit*, TEdit*);      //преобразование в постфиксную форму
+	//общий массив значений переменных (начальные значения из таблицы)
+	double array[201];
+	String znak={"*/+-"};
+	//Set <char, '*', '-'> znak;
+	//typedef Set <char, 0, 47> znak;         //контейнер для множества символов знаков
+};
+
+#endif

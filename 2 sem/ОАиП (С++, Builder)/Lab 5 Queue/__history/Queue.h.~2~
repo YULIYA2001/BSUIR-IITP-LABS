@@ -1,0 +1,17 @@
+#ifndef QueueH
+#define QueueH
+
+class Queue
+{
+	Node *Head, *Tail;
+	public:
+	Queue() : Head(NULL), Tail(NULL){}  //конструктор
+	~Queue();                           //деструктор (очистка очереди)
+	void Show();						//просмотр
+	void Add(int);						//добавление элемента в конец
+	void Delete();					    //удаление элемента из начала
+	bool IsEmpty(Node*);				//проверка на пустоту
+};
+
+
+#endif

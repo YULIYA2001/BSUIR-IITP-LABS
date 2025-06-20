@@ -1,0 +1,55 @@
+#pragma hdrstop
+
+#include "MyTask6.h"
+
+//void MyTask :: DeleteMaxLeftWithConnected(TTree **root, TMemo *Memo1)
+//{
+//	TTree *max = (*root)->left;   //max - корень удаляемого поддерева
+//	if (max != NULL)
+//	{
+//		TTree *prev;  //prev - его предок
+//		max = SearchMaxKey(max, &prev);
+//		//удаление max узла в левом поддереве (вместе с его поддеревом)
+//		Memo1->Lines->Add("Удален узел с max ключом в левом поддереве:");
+//		Memo1->Lines->Add(IntToStr(max->inf.key) + " --- " + max->inf.fio);
+//		Memo1->Lines->Add("и все его потомки (поддерево).");
+//		DeleteTree(&max);
+//		prev->right = NULL;
+//	}
+//	else
+//	{
+//		Memo1->Lines->Add("В левом поддереве нет узлов");
+//	}
+//}
+
+void MyTask :: DeleteMaxLeftWithConnected(TTree **root, TMemo *Memo1){
+	TTree *max = (*root)->left;   //max - корень удаляемого поддерева
+	if(max != NULL)
+	{
+		TTree *prev;	//prev - его предок
+		max = SearchMaxKey(max, &prev);
+		//удаление max узла в левом поддереве
+		//(вместе с непосредственно связанным левым подузлом)
+		Memo1->Lines->Add("Удален узел с max ключом в левом поддереве:");
+		Memo1->Lines->Add(IntToStr(max->inf.key) + " --- " + max->inf.fio);
+		Memo1->Lines->Add("и непосредственно связанный с ним подузел.");
+		TTree *l = max->left;
+		DelInfo(root, max->left->inf.key);
+		DelInfo(root, max->inf.key);
+		//prev->right = NULL;
+	}
+	else
+	{
+		Memo1->Lines->Add("В левом поддереве нет узлов");
+	}
+}TTree* MyTask :: SearchMaxKey(TTree *t, TTree **prev)
+{
+	while (t->right != NULL)
+	{
+		(*prev) = t;
+		t = t->right;
+	}
+	return t;
+}
+
+#pragma package(smart_init)

@@ -1,0 +1,16 @@
+#ifndef MyTask6H
+#define MyTask6H
+
+#include "Tree.h"
+
+class MyTask : public Tree
+{
+	public:
+	//удаление из левой ветви узла с max значением и всех связанных с ним
+	void DeleteMaxLeftWithConnected(TTree **root, TMemo*);
+	private:
+    void Delete(TTree*);
+	void SearchMaxKey(TTree**, TTree**);   //нахождение максимального ключа
+};
+
+#endif

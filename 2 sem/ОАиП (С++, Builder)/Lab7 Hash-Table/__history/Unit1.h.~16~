@@ -1,0 +1,55 @@
+//---------------------------------------------------------------------------
+
+#ifndef Unit1H
+#define Unit1H
+//---------------------------------------------------------------------------
+#include <System.Classes.hpp>
+#include <Vcl.Controls.hpp>
+#include <Vcl.StdCtrls.hpp>
+#include <Vcl.Forms.hpp>
+#include <Vcl.ComCtrls.hpp>
+//---------------------------------------------------------------------------
+class TForm1 : public TForm
+{
+__published:	// IDE-managed Components
+	TButton *CreateButton;
+	TButton *AddButton;
+	TButton *DeleteButton;
+	TButton *FindButton;
+	TButton *CleanButton;
+	TMemo *ElementsMemo;
+	TButton *ExitButton;
+	TLabel *Label1;
+	TButton *MyTaskButton;
+	TEdit *MaxCountEdit;
+	TEdit *HashTableSizeEdit;
+	TLabel *Label2;
+	TLabel *Label3;
+	TLabel *Label4;
+	TLabel *Label5;
+	TEdit *ElementEdit;
+	TButton *PrintButton;
+	TLabel *Label6;
+	TMemo *ShowMemo;
+	TMemo *PrintTableMemo;
+	TLabel *Label7;
+	void __fastcall CreateButtonClick(TObject *Sender);
+	void __fastcall FindButtonClick(TObject *Sender);
+	void __fastcall CleanButtonClick(TObject *Sender);
+	void __fastcall ExitButtonClick(TObject *Sender);
+	void __fastcall PrintButtonClick(TObject *Sender);
+	void __fastcall AddButtonClick(TObject *Sender);
+	void __fastcall DeleteButtonClick(TObject *Sender);
+	void __fastcall Print(TMemo *Memo, TMemo *PrintTableMemo);
+	void __fastcall MyTaskButtonClick(TObject *Sender);
+
+    void __fastcall ScrollBy(int DeltaX, int DeltaY);
+
+private:	// User declarations
+public:		// User declarations
+	__fastcall TForm1(TComponent* Owner);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE TForm1 *Form1;
+//---------------------------------------------------------------------------
+#endif
