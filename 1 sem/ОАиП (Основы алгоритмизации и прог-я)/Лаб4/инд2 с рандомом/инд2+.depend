@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1571808282 source:c:\УЧЁБА\ОАиП\Лаб4\инд2 с рандомом\main.cpp
+	<iostream>
+	<math.h>
+	<conio.h>
+	<cstdlib>
+	<ctime>
+

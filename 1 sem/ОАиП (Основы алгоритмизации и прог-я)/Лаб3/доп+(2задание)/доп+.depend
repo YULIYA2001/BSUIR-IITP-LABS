@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1570695406 source:c:\УЧЁБА\ОАиП\Лаб3\доп+\main.cpp
+	<iostream>
+	<math.h>
+	<conio.h>
+
+1570698929 source:c:\УЧЁБА\ОАиП\Лаб3\доп+(2задание)\main.cpp
+	<iostream>
+	<math.h>
+	<conio.h>
+

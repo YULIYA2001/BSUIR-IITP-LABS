@@ -1,0 +1,7 @@
+6
+Petrov Petr Petrovich Minsk 5 6 4
+Ivanov Ivan Ivanovich Mogilev 6 3 4
+Borisov Boris Borisovich Brest 8 6 9
+Sidorov Igor Igorevich Vitebsk 2 2 7
+Vladov Vladislav Vladislavovich Minsk 10 10 10
+Vasilev Vasiliy Vasilevich Minsk 4 3 5

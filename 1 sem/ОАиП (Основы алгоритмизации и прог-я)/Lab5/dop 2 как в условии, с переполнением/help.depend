@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1574617276 source:c:\УЧЁБА\ОАиП\lab5\help\main.cpp
+	<iostream>
+	<conio.h>
+	<cmath>
+
+1574617276 source:c:\УЧЁБА\ОАиП\lab5\dop 2 как в условии, с переполнением\main.cpp
+	<iostream>
+	<conio.h>
+	<cmath>
+

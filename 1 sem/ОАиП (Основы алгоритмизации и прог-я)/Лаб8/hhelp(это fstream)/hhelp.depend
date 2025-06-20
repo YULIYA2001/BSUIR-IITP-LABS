@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1575221370 source:c:\св╗аю\нюХо\кЮА6\hhelp\main.cpp
+	<iostream>
+
+1576917988 source:c:\св╗аю\нюХо\кЮА7\hhelp\main.cpp
+	<iostream>
+
+1577130958 source:c:\св╗аю\нюХо\кЮА8\hhelp\main.cpp
+	<iostream>
+	<fstream>
+	<windows.h>
+
