@@ -1,0 +1,53 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>961bbd00-c843-49ce-9e40-7943c43b6d55</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>Lab11.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>Lab11</Name>
+    <RootNamespace>Lab11</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="CollocationMethod.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Discrepancy.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DiscreteLeastSquaresMethod.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Error.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GalerkinMethod.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IntegralLeastSquaresMethod.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Lab11.py" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
