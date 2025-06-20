@@ -1,0 +1,9 @@
+﻿  Lab4.cpp
+C:\YCHEBA\5_term\СП\Lab4\Lab4.cpp(21,21): warning C4244: 'initializing': conversion from 'ULONGLONG' to 'DWORD', possible loss of data
+C:\YCHEBA\5_term\СП\Lab4\Lab4.cpp(38,27): warning C4018: '<': signed/unsigned mismatch
+C:\YCHEBA\5_term\СП\Lab4\Lab4.cpp(56,23): warning C4018: '<': signed/unsigned mismatch
+C:\YCHEBA\5_term\СП\Lab4\Lab4.cpp(59,19): warning C4244: 'initializing': conversion from 'ULONGLONG' to 'DWORD', possible loss of data
+C:\YCHEBA\5_term\СП\Lab4\Lab4.cpp(81,21): warning C4244: 'initializing': conversion from 'ULONGLONG' to 'DWORD', possible loss of data
+C:\YCHEBA\5_term\СП\Lab4\Lab4.cpp(92,27): warning C4018: '<': signed/unsigned mismatch
+C:\YCHEBA\5_term\СП\Lab4\Lab4.cpp(96,19): warning C4244: 'initializing': conversion from 'ULONGLONG' to 'DWORD', possible loss of data
+  Lab4.vcxproj -> C:\YCHEBA\5_term\СП\Lab4\Debug\Lab4.exe
